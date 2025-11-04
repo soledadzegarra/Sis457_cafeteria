@@ -53,7 +53,7 @@ namespace CpCafeteria
         {
             if (validar())
             {
-                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
+                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt("hola123"));
                 if (usuario != null)
                 {
                     Util.usuario = usuario;

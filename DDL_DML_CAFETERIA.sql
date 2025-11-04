@@ -155,3 +155,13 @@ AS
   WHERE e.estado<>-1 
 		AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY e.nombres,e.primerApellido;
+
+-- DML
+
+--Empleados
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES ('1234567', 'Marlene', 'Cruz', 'Villca', 'Plaza', 654654654, 'Administrador');
+
+
+INSERT INTO Usuario(idEmpleado,usuario,clave)
+VALUES (1, 'marle', 'i0hcoO/nssY6WOs9pOp5Xw==');
