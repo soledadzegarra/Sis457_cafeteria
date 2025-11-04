@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
+  "WorkspaceRootPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\marle lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmautenticacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmautenticacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\marle lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\marle lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmautenticacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmautenticacion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmAutenticacion.Designer.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.Designer.cs",
-              "RelativeDocumentMoniker": "CpCafeteria\\FrmAutenticacion.Designer.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.Designer.cs",
-              "RelativeToolTip": "CpCafeteria\\FrmAutenticacion.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T20:16:54.059Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FrmAutenticacion.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs",
               "RelativeDocumentMoniker": "CpCafeteria\\FrmAutenticacion.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs",
               "RelativeToolTip": "CpCafeteria\\FrmAutenticacion.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T20:21:32.221Z",
+              "WhenOpened": "2025-11-04T21:43:24.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FrmAutenticacion.Designer.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.Designer.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmAutenticacion.Designer.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.Designer.cs",
+              "RelativeToolTip": "CpCafeteria\\FrmAutenticacion.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T21:31:45.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FrmAutenticacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs",
               "RelativeDocumentMoniker": "CpCafeteria\\FrmAutenticacion.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs [Dise\u00F1o]",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAutenticacion.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpCafeteria\\FrmAutenticacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T20:04:01.159Z",
+              "WhenOpened": "2025-11-04T21:26:08.634Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
