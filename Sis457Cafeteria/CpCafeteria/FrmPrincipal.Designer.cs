@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            this.pnContenedor = new System.Windows.Forms.Panel();
-            this.lblBienvenidos = new System.Windows.Forms.Label();
-            this.lblReloj = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -44,56 +42,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.pctCafeteriaLogo = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.paBarraTitulo = new System.Windows.Forms.Panel();
             this.btnDeslizar = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnRestaurar = new System.Windows.Forms.Button();
-            this.pnContenedor.SuspendLayout();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.pnContenedor = new System.Windows.Forms.Panel();
+            this.lblBienvenidos = new System.Windows.Forms.Label();
+            this.lblReloj = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCafeteriaLogo)).BeginInit();
             this.paBarraTitulo.SuspendLayout();
+            this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnContenedor
-            // 
-            this.pnContenedor.BackColor = System.Drawing.Color.PapayaWhip;
-            this.pnContenedor.Controls.Add(this.paBarraTitulo);
-            this.pnContenedor.Controls.Add(this.lblBienvenidos);
-            this.pnContenedor.Controls.Add(this.lblReloj);
-            this.pnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContenedor.Location = new System.Drawing.Point(333, 0);
-            this.pnContenedor.Margin = new System.Windows.Forms.Padding(4);
-            this.pnContenedor.Name = "pnContenedor";
-            this.pnContenedor.Size = new System.Drawing.Size(1382, 753);
-            this.pnContenedor.TabIndex = 4;
-            // 
-            // lblBienvenidos
-            // 
-            this.lblBienvenidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblBienvenidos.Font = new System.Drawing.Font("Century Gothic", 90F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidos.ForeColor = System.Drawing.Color.Chocolate;
-            this.lblBienvenidos.Location = new System.Drawing.Point(-9, 48);
-            this.lblBienvenidos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBienvenidos.Name = "lblBienvenidos";
-            this.lblBienvenidos.Size = new System.Drawing.Size(1396, 217);
-            this.lblBienvenidos.TabIndex = 2;
-            this.lblBienvenidos.Text = "Bienvenido";
-            this.lblBienvenidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblReloj
-            // 
-            this.lblReloj.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblReloj.Font = new System.Drawing.Font("Century Gothic", 140.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReloj.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblReloj.Location = new System.Drawing.Point(-1, 249);
-            this.lblReloj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblReloj.Name = "lblReloj";
-            this.lblReloj.Size = new System.Drawing.Size(1388, 314);
-            this.lblReloj.TabIndex = 0;
-            this.lblReloj.Text = "xxxx";
-            this.lblReloj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnMenu
             // 
@@ -113,14 +76,14 @@
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(333, 753);
-            this.pnMenu.TabIndex = 3;
+            this.pnMenu.Size = new System.Drawing.Size(333, 800);
+            this.pnMenu.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel2.Location = new System.Drawing.Point(4, 348);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(11, 49);
             this.panel2.TabIndex = 25;
@@ -129,7 +92,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel3.Location = new System.Drawing.Point(4, 277);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(11, 49);
             this.panel3.TabIndex = 27;
@@ -144,13 +107,14 @@
             this.btnReportePedidos.Image = global::CpCafeteria.Properties.Resources.description_25dp_FFEFD5_FILL0_wght400_GRAD0_opsz24;
             this.btnReportePedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportePedidos.Location = new System.Drawing.Point(0, 350);
-            this.btnReportePedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReportePedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReportePedidos.Name = "btnReportePedidos";
             this.btnReportePedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReportePedidos.Size = new System.Drawing.Size(333, 49);
             this.btnReportePedidos.TabIndex = 26;
             this.btnReportePedidos.Text = "       Reporte Pedidos";
             this.btnReportePedidos.UseVisualStyleBackColor = true;
+            this.btnReportePedidos.Click += new System.EventHandler(this.btnReportePedidos_Click);
             // 
             // btnPedidos
             // 
@@ -162,19 +126,20 @@
             this.btnPedidos.Image = global::CpCafeteria.Properties.Resources.point_of_sale_25dp_FFEFD5_FILL0_wght400_GRAD0_opsz242;
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPedidos.Location = new System.Drawing.Point(0, 277);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnPedidos.Size = new System.Drawing.Size(333, 49);
             this.btnPedidos.TabIndex = 24;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel8.Location = new System.Drawing.Point(4, 500);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(11, 49);
             this.panel8.TabIndex = 19;
@@ -189,19 +154,20 @@
             this.btnClientes.Image = global::CpCafeteria.Properties.Resources.sentiment_satisfied_25dp_FFEFD5_FILL0_wght400_GRAD0_opsz24;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.Location = new System.Drawing.Point(0, 501);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnClientes.Size = new System.Drawing.Size(333, 49);
             this.btnClientes.TabIndex = 18;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel5.Location = new System.Drawing.Point(4, 423);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(11, 49);
             this.panel5.TabIndex = 16;
@@ -216,19 +182,20 @@
             this.btnEmpleados.Image = global::CpCafeteria.Properties.Resources.person_search_25dp_FFEFD5_FILL0_wght400_GRAD0_opsz24;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpleados.Location = new System.Drawing.Point(0, 423);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnEmpleados.Size = new System.Drawing.Size(333, 49);
             this.btnEmpleados.TabIndex = 15;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel1.Location = new System.Drawing.Point(4, 208);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(11, 49);
             this.panel1.TabIndex = 2;
@@ -243,13 +210,14 @@
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.Location = new System.Drawing.Point(0, 208);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnProductos.Size = new System.Drawing.Size(333, 49);
             this.btnProductos.TabIndex = 1;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // pctCafeteriaLogo
             // 
@@ -261,49 +229,7 @@
             this.pctCafeteriaLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctCafeteriaLogo.TabIndex = 0;
             this.pctCafeteriaLogo.TabStop = false;
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.FlatAppearance.BorderSize = 0;
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1294, 7);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(33, 31);
-            this.btnMaximizar.TabIndex = 8;
-            this.btnMaximizar.UseVisualStyleBackColor = true;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1254, 7);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(33, 31);
-            this.btnMinimizar.TabIndex = 6;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1334, 7);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
-            this.btnCerrar.TabIndex = 5;
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.pctCafeteriaLogo.Click += new System.EventHandler(this.pctCafeteriaLogo_Click);
             // 
             // paBarraTitulo
             // 
@@ -314,11 +240,13 @@
             this.paBarraTitulo.Controls.Add(this.btnMinimizar);
             this.paBarraTitulo.Controls.Add(this.btnCerrar);
             this.paBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.paBarraTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.paBarraTitulo.Location = new System.Drawing.Point(333, 0);
+            this.paBarraTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paBarraTitulo.Name = "paBarraTitulo";
-            this.paBarraTitulo.Size = new System.Drawing.Size(1382, 62);
-            this.paBarraTitulo.TabIndex = 3;
+            this.paBarraTitulo.Size = new System.Drawing.Size(1400, 62);
+            this.paBarraTitulo.TabIndex = 1;
+            this.paBarraTitulo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.paBarraTitulo_MouseDoubleClick);
+            this.paBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.paBarraTitulo_MouseDown);
             // 
             // btnDeslizar
             // 
@@ -327,11 +255,27 @@
             this.btnDeslizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeslizar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeslizar.Image")));
             this.btnDeslizar.Location = new System.Drawing.Point(4, 7);
-            this.btnDeslizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeslizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeslizar.Name = "btnDeslizar";
             this.btnDeslizar.Size = new System.Drawing.Size(47, 43);
             this.btnDeslizar.TabIndex = 9;
             this.btnDeslizar.UseVisualStyleBackColor = true;
+            this.btnDeslizar.Click += new System.EventHandler(this.btnDeslizar_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.Location = new System.Drawing.Point(1312, 7);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(33, 31);
+            this.btnMaximizar.TabIndex = 8;
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnRestaurar
             // 
@@ -340,55 +284,134 @@
             this.btnRestaurar.FlatAppearance.BorderSize = 0;
             this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1294, 7);
+            this.btnRestaurar.Location = new System.Drawing.Point(1312, 7);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(0);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(33, 31);
             this.btnRestaurar.TabIndex = 7;
             this.btnRestaurar.UseVisualStyleBackColor = true;
             this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(1272, 7);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 31);
+            this.btnMinimizar.TabIndex = 6;
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(1352, 7);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
+            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // pnContenedor
+            // 
+            this.pnContenedor.BackColor = System.Drawing.Color.PapayaWhip;
+            this.pnContenedor.Controls.Add(this.lblBienvenidos);
+            this.pnContenedor.Controls.Add(this.lblReloj);
+            this.pnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContenedor.Location = new System.Drawing.Point(333, 62);
+            this.pnContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnContenedor.Name = "pnContenedor";
+            this.pnContenedor.Size = new System.Drawing.Size(1400, 738);
+            this.pnContenedor.TabIndex = 2;
+            this.pnContenedor.Click += new System.EventHandler(this.pctCafeteriaLogo_Click);
+            // 
+            // lblBienvenidos
+            // 
+            this.lblBienvenidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBienvenidos.Font = new System.Drawing.Font("Century Gothic", 90F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenidos.ForeColor = System.Drawing.Color.Chocolate;
+            this.lblBienvenidos.Location = new System.Drawing.Point(0, 48);
+            this.lblBienvenidos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBienvenidos.Name = "lblBienvenidos";
+            this.lblBienvenidos.Size = new System.Drawing.Size(1396, 217);
+            this.lblBienvenidos.TabIndex = 2;
+            this.lblBienvenidos.Text = "Bienvenido";
+            this.lblBienvenidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblReloj
+            // 
+            this.lblReloj.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblReloj.Font = new System.Drawing.Font("Century Gothic", 140.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReloj.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblReloj.Location = new System.Drawing.Point(8, 242);
+            this.lblReloj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReloj.Name = "lblReloj";
+            this.lblReloj.Size = new System.Drawing.Size(1388, 314);
+            this.lblReloj.TabIndex = 0;
+            this.lblReloj.Text = "xxxx";
+            this.lblReloj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1715, 753);
+            this.ClientSize = new System.Drawing.Size(1733, 800);
             this.Controls.Add(this.pnContenedor);
+            this.Controls.Add(this.paBarraTitulo);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            this.pnContenedor.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctCafeteriaLogo)).EndInit();
             this.paBarraTitulo.ResumeLayout(false);
+            this.pnContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnContenedor;
-        private System.Windows.Forms.Label lblBienvenidos;
-        private System.Windows.Forms.Label lblReloj;
         private System.Windows.Forms.Panel pnMenu;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.PictureBox pctCafeteriaLogo;
-        private System.Windows.Forms.Button btnReportePedidos;
-        private System.Windows.Forms.Button btnPedidos;
-        private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Panel paBarraTitulo;
-        private System.Windows.Forms.Button btnDeslizar;
-        private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnMinimizar;
-        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Button btnDeslizar;
+        private System.Windows.Forms.PictureBox pctCafeteriaLogo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Panel pnContenedor;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnEmpleados;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnPedidos;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnReportePedidos;
+        private System.Windows.Forms.Label lblReloj;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label lblBienvenidos;
     }
 }
