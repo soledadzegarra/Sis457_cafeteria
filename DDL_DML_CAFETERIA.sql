@@ -162,6 +162,12 @@ AS
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('1234567', 'Marlene', 'Cruz', 'Villca', 'Plaza', 654654654, 'Administrador');
 
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES ('1234567', 'Soledad', 'Zegarra', 'A.', 'Centro', 9876543, 'Administrador');
 
+-- clave "hola123"
 INSERT INTO Usuario(idEmpleado,usuario,clave)
 VALUES (1, 'marle', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
+INSERT INTO Usuario(idEmpleado,usuario,clave)
+VALUES (2, 'sole', 'i0hcoO/nssY6WOs9pOp5Xw==');
