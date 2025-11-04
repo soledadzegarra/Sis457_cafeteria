@@ -30,10 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
-            this.pnListaProductos = new System.Windows.Forms.Panel();
-            this.lblProductos = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.lblProductos = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pnListaProductos = new System.Windows.Forms.Panel();
             this.pnlAgregar = new System.Windows.Forms.Panel();
+            this.btnCerrarAgregar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.nudPrecioVenta = new System.Windows.Forms.NumericUpDown();
             this.nudSaldo = new System.Windows.Forms.NumericUpDown();
@@ -47,41 +50,50 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnCerrarAgregar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.erpCodigo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpCategoria = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpSaldo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.pctBuscarObscuro = new System.Windows.Forms.PictureBox();
+            this.pctBuscar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.erpPrecioVenta = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpSaldo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpCategoria = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpCodigo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pnListaProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            this.pnListaProductos.SuspendLayout();
             this.pnlAgregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSaldo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpSaldo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCodigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpSaldo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBuscarObscuro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBuscar)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnListaProductos
+            // dgvProductos
             // 
-            this.pnListaProductos.BackColor = System.Drawing.Color.NavajoWhite;
-            this.pnListaProductos.Controls.Add(this.lblProductos);
-            this.pnListaProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnListaProductos.Location = new System.Drawing.Point(0, 0);
-            this.pnListaProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.pnListaProductos.Name = "pnListaProductos";
-            this.pnListaProductos.Size = new System.Drawing.Size(1400, 52);
-            this.pnListaProductos.TabIndex = 8;
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(13, 138);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductos.Size = new System.Drawing.Size(1371, 560);
+            this.dgvProductos.TabIndex = 0;
             // 
             // lblProductos
             // 
@@ -95,22 +107,29 @@
             this.lblProductos.TabIndex = 5;
             this.lblProductos.Text = "Lista de Productos";
             // 
-            // dgvProductos
+            // txtBuscar
             // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AllowUserToDeleteRows = false;
-            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(13, 147);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(1371, 560);
-            this.dgvProductos.TabIndex = 9;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBuscar.Location = new System.Drawing.Point(456, 106);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(268, 15);
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
+            // 
+            // pnListaProductos
+            // 
+            this.pnListaProductos.BackColor = System.Drawing.Color.NavajoWhite;
+            this.pnListaProductos.Controls.Add(this.lblProductos);
+            this.pnListaProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnListaProductos.Location = new System.Drawing.Point(0, 0);
+            this.pnListaProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.pnListaProductos.Name = "pnListaProductos";
+            this.pnListaProductos.Size = new System.Drawing.Size(1400, 52);
+            this.pnListaProductos.TabIndex = 7;
             // 
             // pnlAgregar
             // 
@@ -133,11 +152,48 @@
             this.pnlAgregar.Controls.Add(this.txtNombre);
             this.pnlAgregar.Controls.Add(this.txtDescripcion);
             this.pnlAgregar.Controls.Add(this.btnGuardar);
-            this.pnlAgregar.Location = new System.Drawing.Point(413, 64);
+            this.pnlAgregar.Location = new System.Drawing.Point(428, 60);
             this.pnlAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAgregar.Name = "pnlAgregar";
             this.pnlAgregar.Size = new System.Drawing.Size(575, 610);
-            this.pnlAgregar.TabIndex = 15;
+            this.pnlAgregar.TabIndex = 13;
+            // 
+            // btnCerrarAgregar
+            // 
+            this.btnCerrarAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarAgregar.BackColor = System.Drawing.Color.Tomato;
+            this.btnCerrarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarAgregar.FlatAppearance.BorderSize = 0;
+            this.btnCerrarAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCerrarAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAgregar.Image")));
+            this.btnCerrarAgregar.Location = new System.Drawing.Point(529, 11);
+            this.btnCerrarAgregar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrarAgregar.Name = "btnCerrarAgregar";
+            this.btnCerrarAgregar.Size = new System.Drawing.Size(33, 31);
+            this.btnCerrarAgregar.TabIndex = 24;
+            this.btnCerrarAgregar.UseVisualStyleBackColor = false;
+            this.btnCerrarAgregar.Click += new System.EventHandler(this.btnCerrarAgregar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Tomato;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.Image = global::CpCafeteria.Properties.Resources.dangerous_25dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(323, 516);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(147, 37);
+            this.btnCancelar.TabIndex = 34;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cbxCategoria
             // 
@@ -295,41 +351,6 @@
             this.txtDescripcion.Size = new System.Drawing.Size(276, 22);
             this.txtDescripcion.TabIndex = 20;
             // 
-            // btnCerrarAgregar
-            // 
-            this.btnCerrarAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarAgregar.BackColor = System.Drawing.Color.Tomato;
-            this.btnCerrarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarAgregar.FlatAppearance.BorderSize = 0;
-            this.btnCerrarAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCerrarAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAgregar.Image")));
-            this.btnCerrarAgregar.Location = new System.Drawing.Point(529, 11);
-            this.btnCerrarAgregar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrarAgregar.Name = "btnCerrarAgregar";
-            this.btnCerrarAgregar.Size = new System.Drawing.Size(33, 31);
-            this.btnCerrarAgregar.TabIndex = 24;
-            this.btnCerrarAgregar.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Tomato;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCancelar.Image = global::CpCafeteria.Properties.Resources.dangerous_25dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(323, 516);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 37);
-            this.btnCancelar.TabIndex = 34;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.YellowGreen;
@@ -348,6 +369,52 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // erpCodigo
+            // 
+            this.erpCodigo.ContainerControl = this;
+            // 
+            // erpNombre
+            // 
+            this.erpNombre.ContainerControl = this;
+            // 
+            // erpDescripcion
+            // 
+            this.erpDescripcion.ContainerControl = this;
+            // 
+            // erpCategoria
+            // 
+            this.erpCategoria.ContainerControl = this;
+            // 
+            // erpSaldo
+            // 
+            this.erpSaldo.ContainerControl = this;
+            // 
+            // erpPrecioVenta
+            // 
+            this.erpPrecioVenta.ContainerControl = this;
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarCategoria.BackColor = System.Drawing.Color.Orange;
+            this.btnAgregarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCategoria.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategoria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregarCategoria.Image = global::CpCafeteria.Properties.Resources.add_circle_25dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.btnAgregarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(1144, 94);
+            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(240, 37);
+            this.btnAgregarCategoria.TabIndex = 12;
+            this.btnAgregarCategoria.Text = "Agregar Categoria";
+            this.btnAgregarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarCategoria.UseVisualStyleBackColor = false;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // btnEditar
             // 
@@ -359,15 +426,16 @@
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEditar.Image = global::CpCafeteria.Properties.Resources.edit_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(150, 93);
+            this.btnEditar.Location = new System.Drawing.Point(153, 94);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
             this.btnEditar.Size = new System.Drawing.Size(129, 37);
-            this.btnEditar.TabIndex = 14;
+            this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -379,14 +447,37 @@
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEliminar.Image = global::CpCafeteria.Properties.Resources.delete_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(288, 93);
+            this.btnEliminar.Location = new System.Drawing.Point(291, 94);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(129, 37);
-            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // pctBuscarObscuro
+            // 
+            this.pctBuscarObscuro.Image = global::CpCafeteria.Properties.Resources.lupa1;
+            this.pctBuscarObscuro.Location = new System.Drawing.Point(447, 94);
+            this.pctBuscarObscuro.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBuscarObscuro.Name = "pctBuscarObscuro";
+            this.pctBuscarObscuro.Size = new System.Drawing.Size(316, 37);
+            this.pctBuscarObscuro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctBuscarObscuro.TabIndex = 9;
+            this.pctBuscarObscuro.TabStop = false;
+            // 
+            // pctBuscar
+            // 
+            this.pctBuscar.Image = global::CpCafeteria.Properties.Resources.lupa2;
+            this.pctBuscar.Location = new System.Drawing.Point(447, 94);
+            this.pctBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBuscar.Name = "pctBuscar";
+            this.pctBuscar.Size = new System.Drawing.Size(316, 37);
+            this.pctBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctBuscar.TabIndex = 8;
+            this.pctBuscar.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -398,38 +489,15 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregar.Image = global::CpCafeteria.Properties.Resources.add_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(13, 93);
+            this.btnAgregar.Location = new System.Drawing.Point(16, 94);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(129, 37);
-            this.btnAgregar.TabIndex = 12;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
-            // erpPrecioVenta
-            // 
-            this.erpPrecioVenta.ContainerControl = this;
-            // 
-            // erpSaldo
-            // 
-            this.erpSaldo.ContainerControl = this;
-            // 
-            // erpCategoria
-            // 
-            this.erpCategoria.ContainerControl = this;
-            // 
-            // erpDescripcion
-            // 
-            this.erpDescripcion.ContainerControl = this;
-            // 
-            // erpNombre
-            // 
-            this.erpNombre.ContainerControl = this;
-            // 
-            // erpCodigo
-            // 
-            this.erpCodigo.ContainerControl = this;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FrmProductos
             // 
@@ -438,61 +506,75 @@
             this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(1400, 738);
             this.Controls.Add(this.pnlAgregar);
+            this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.pctBuscarObscuro);
+            this.Controls.Add(this.pctBuscar);
+            this.Controls.Add(this.pnListaProductos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvProductos);
-            this.Controls.Add(this.pnListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProductos";
             this.Text = "Productos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProductos_FormClosing);
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.pnListaProductos.ResumeLayout(false);
             this.pnListaProductos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.pnlAgregar.ResumeLayout(false);
             this.pnlAgregar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSaldo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpSaldo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpSaldo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBuscarObscuro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBuscar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnListaProductos;
-        private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label lblProductos;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Panel pnListaProductos;
+        private System.Windows.Forms.PictureBox pctBuscar;
+        private System.Windows.Forms.PictureBox pctBuscarObscuro;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Panel pnlAgregar;
-        private System.Windows.Forms.Button btnCerrarAgregar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox cbxCategoria;
-        private System.Windows.Forms.NumericUpDown nudPrecioVenta;
-        private System.Windows.Forms.NumericUpDown nudSaldo;
-        private System.Windows.Forms.Label lblAgregarProductos;
-        private System.Windows.Forms.Label lblPrecioVenta;
-        private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ErrorProvider erpPrecioVenta;
-        private System.Windows.Forms.ErrorProvider erpSaldo;
-        private System.Windows.Forms.ErrorProvider erpCategoria;
-        private System.Windows.Forms.ErrorProvider erpDescripcion;
-        private System.Windows.Forms.ErrorProvider erpNombre;
+        private System.Windows.Forms.Label lblPrecioVenta;
+        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnCerrarAgregar;
+        private System.Windows.Forms.Label lblAgregarProductos;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.NumericUpDown nudPrecioVenta;
+        private System.Windows.Forms.NumericUpDown nudSaldo;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ErrorProvider erpCodigo;
+        private System.Windows.Forms.ErrorProvider erpNombre;
+        private System.Windows.Forms.ErrorProvider erpDescripcion;
+        private System.Windows.Forms.ErrorProvider erpCategoria;
+        private System.Windows.Forms.ErrorProvider erpSaldo;
+        private System.Windows.Forms.ErrorProvider erpPrecioVenta;
     }
 }

@@ -186,6 +186,8 @@
     <None Include="Resources\edit_25dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\delete_25dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\dangerous_25dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\add_shopping_cart_25dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\add_circle_25dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Resources\Image_21_may_2025__09_58_34_a.m.-removebg-preview2.ico" />
     <Content Include="Resources\Image_21_may_2025__09_58_34_a.m.-removebg-preview2.png" />
     <None Include="Resources\Image_21_may_2025__09_58_34_a.m.-removebg-preview21.png" />

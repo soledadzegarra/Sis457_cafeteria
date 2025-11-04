@@ -19,3 +19,12 @@ G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCa
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\obj\Debug\ClnCafet.3A80C72A.Up2Date
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\obj\Debug\ClnCafeteria.dll
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\obj\Debug\ClnCafeteria.pdb
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\ClnCafeteria.dll.config
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\CadCafeteria.dll
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\EntityFramework.dll
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\EntityFramework.SqlServer.dll
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\CadCafeteria.pdb
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\CadCafeteria.dll.config
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\EntityFramework.xml
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\bin\Debug\EntityFramework.SqlServer.xml
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\ClnCafeteria\obj\Debug\ClnCafet.3A80C72A.Up2Date
