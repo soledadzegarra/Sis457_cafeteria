@@ -35,6 +35,8 @@
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pnlAgregar = new System.Windows.Forms.Panel();
+            this.btnCerrarAgregar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblAgregarClientes = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
@@ -42,12 +44,10 @@
             this.txtCedulaIdentidad = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.erpCedulaIdentidad = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpNombres = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpApellidos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnCerrarAgregar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.pctBuscarObscuro = new System.Windows.Forms.PictureBox();
             this.pctBuscar = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -76,11 +76,11 @@
             // lblClientes
             // 
             this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.Font = new System.Drawing.Font("Segoe Script", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientes.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.lblClientes.Location = new System.Drawing.Point(3, 0);
+            this.lblClientes.Location = new System.Drawing.Point(417, 0);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(267, 38);
+            this.lblClientes.Size = new System.Drawing.Size(306, 53);
             this.lblClientes.TabIndex = 5;
             this.lblClientes.Text = "Lista de Clientes";
             // 
@@ -88,7 +88,7 @@
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -130,6 +130,43 @@
             this.pnlAgregar.Name = "pnlAgregar";
             this.pnlAgregar.Size = new System.Drawing.Size(405, 347);
             this.pnlAgregar.TabIndex = 23;
+            // 
+            // btnCerrarAgregar
+            // 
+            this.btnCerrarAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarAgregar.BackColor = System.Drawing.Color.Tomato;
+            this.btnCerrarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarAgregar.FlatAppearance.BorderSize = 0;
+            this.btnCerrarAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCerrarAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAgregar.Image")));
+            this.btnCerrarAgregar.Location = new System.Drawing.Point(370, 9);
+            this.btnCerrarAgregar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrarAgregar.Name = "btnCerrarAgregar";
+            this.btnCerrarAgregar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrarAgregar.TabIndex = 24;
+            this.btnCerrarAgregar.UseVisualStyleBackColor = false;
+            this.btnCerrarAgregar.Click += new System.EventHandler(this.btnCerrarAgregar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Tomato;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.Image = global::CpCafeteria.Properties.Resources.dangerous_25dp_000000_FILL0_wght400_GRAD0_opsz24;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(226, 270);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(110, 30);
+            this.btnCancelar.TabIndex = 34;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblAgregarClientes
             // 
@@ -205,55 +242,6 @@
             this.txtApellidos.Size = new System.Drawing.Size(208, 20);
             this.txtApellidos.TabIndex = 20;
             // 
-            // erpCedulaIdentidad
-            // 
-            this.erpCedulaIdentidad.ContainerControl = this;
-            // 
-            // erpNombres
-            // 
-            this.erpNombres.ContainerControl = this;
-            // 
-            // erpApellidos
-            // 
-            this.erpApellidos.ContainerControl = this;
-            // 
-            // btnCerrarAgregar
-            // 
-            this.btnCerrarAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarAgregar.BackColor = System.Drawing.Color.Tomato;
-            this.btnCerrarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarAgregar.FlatAppearance.BorderSize = 0;
-            this.btnCerrarAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCerrarAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAgregar.Image")));
-            this.btnCerrarAgregar.Location = new System.Drawing.Point(370, 9);
-            this.btnCerrarAgregar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrarAgregar.Name = "btnCerrarAgregar";
-            this.btnCerrarAgregar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrarAgregar.TabIndex = 24;
-            this.btnCerrarAgregar.UseVisualStyleBackColor = false;
-            this.btnCerrarAgregar.Click += new System.EventHandler(this.btnCerrarAgregar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Tomato;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCancelar.Image = global::CpCafeteria.Properties.Resources.dangerous_25dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(226, 270);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(110, 30);
-            this.btnCancelar.TabIndex = 34;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.YellowGreen;
@@ -273,6 +261,18 @@
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // erpCedulaIdentidad
+            // 
+            this.erpCedulaIdentidad.ContainerControl = this;
+            // 
+            // erpNombres
+            // 
+            this.erpNombres.ContainerControl = this;
+            // 
+            // erpApellidos
+            // 
+            this.erpApellidos.ContainerControl = this;
             // 
             // pctBuscarObscuro
             // 

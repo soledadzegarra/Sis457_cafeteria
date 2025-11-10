@@ -86,13 +86,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(13, 138);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProductos.Location = new System.Drawing.Point(10, 112);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(1371, 560);
+            this.dgvProductos.Size = new System.Drawing.Size(1028, 455);
             this.dgvProductos.TabIndex = 0;
             // 
             // lblProductos
@@ -100,10 +99,9 @@
             this.lblProductos.AutoSize = true;
             this.lblProductos.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductos.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblProductos.Location = new System.Drawing.Point(4, 0);
-            this.lblProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductos.Location = new System.Drawing.Point(3, 0);
             this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(371, 47);
+            this.lblProductos.Size = new System.Drawing.Size(295, 38);
             this.lblProductos.TabIndex = 5;
             this.lblProductos.Text = "Lista de Productos";
             // 
@@ -111,10 +109,9 @@
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscar.Location = new System.Drawing.Point(456, 106);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(342, 86);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(268, 15);
+            this.txtBuscar.Size = new System.Drawing.Size(201, 13);
             this.txtBuscar.TabIndex = 6;
             this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
@@ -126,9 +123,8 @@
             this.pnListaProductos.Controls.Add(this.lblProductos);
             this.pnListaProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnListaProductos.Location = new System.Drawing.Point(0, 0);
-            this.pnListaProductos.Margin = new System.Windows.Forms.Padding(4);
             this.pnListaProductos.Name = "pnListaProductos";
-            this.pnListaProductos.Size = new System.Drawing.Size(1400, 52);
+            this.pnListaProductos.Size = new System.Drawing.Size(1050, 42);
             this.pnListaProductos.TabIndex = 7;
             // 
             // pnlAgregar
@@ -152,10 +148,9 @@
             this.pnlAgregar.Controls.Add(this.txtNombre);
             this.pnlAgregar.Controls.Add(this.txtDescripcion);
             this.pnlAgregar.Controls.Add(this.btnGuardar);
-            this.pnlAgregar.Location = new System.Drawing.Point(428, 60);
-            this.pnlAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlAgregar.Location = new System.Drawing.Point(321, 49);
             this.pnlAgregar.Name = "pnlAgregar";
-            this.pnlAgregar.Size = new System.Drawing.Size(575, 610);
+            this.pnlAgregar.Size = new System.Drawing.Size(432, 496);
             this.pnlAgregar.TabIndex = 13;
             // 
             // btnCerrarAgregar
@@ -167,10 +162,10 @@
             this.btnCerrarAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.btnCerrarAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAgregar.Image")));
-            this.btnCerrarAgregar.Location = new System.Drawing.Point(529, 11);
+            this.btnCerrarAgregar.Location = new System.Drawing.Point(397, 9);
             this.btnCerrarAgregar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCerrarAgregar.Name = "btnCerrarAgregar";
-            this.btnCerrarAgregar.Size = new System.Drawing.Size(33, 31);
+            this.btnCerrarAgregar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrarAgregar.TabIndex = 24;
             this.btnCerrarAgregar.UseVisualStyleBackColor = false;
             this.btnCerrarAgregar.Click += new System.EventHandler(this.btnCerrarAgregar_Click);
@@ -185,10 +180,10 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.Image = global::CpCafeteria.Properties.Resources.dangerous_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(323, 516);
+            this.btnCancelar.Location = new System.Drawing.Point(242, 419);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 37);
+            this.btnCancelar.Size = new System.Drawing.Size(110, 30);
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,36 +194,33 @@
             // 
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(220, 320);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxCategoria.Location = new System.Drawing.Point(165, 260);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(276, 24);
+            this.cbxCategoria.Size = new System.Drawing.Size(208, 21);
             this.cbxCategoria.TabIndex = 33;
             // 
             // nudPrecioVenta
             // 
-            this.nudPrecioVenta.Location = new System.Drawing.Point(220, 446);
-            this.nudPrecioVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPrecioVenta.Location = new System.Drawing.Point(165, 362);
             this.nudPrecioVenta.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.nudPrecioVenta.Name = "nudPrecioVenta";
-            this.nudPrecioVenta.Size = new System.Drawing.Size(277, 22);
+            this.nudPrecioVenta.Size = new System.Drawing.Size(208, 20);
             this.nudPrecioVenta.TabIndex = 32;
             // 
             // nudSaldo
             // 
-            this.nudSaldo.Location = new System.Drawing.Point(220, 385);
-            this.nudSaldo.Margin = new System.Windows.Forms.Padding(4);
+            this.nudSaldo.Location = new System.Drawing.Point(165, 313);
             this.nudSaldo.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.nudSaldo.Name = "nudSaldo";
-            this.nudSaldo.Size = new System.Drawing.Size(277, 22);
+            this.nudSaldo.Size = new System.Drawing.Size(208, 20);
             this.nudSaldo.TabIndex = 31;
             // 
             // lblAgregarProductos
@@ -238,9 +230,8 @@
             this.lblAgregarProductos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarProductos.ForeColor = System.Drawing.Color.SaddleBrown;
             this.lblAgregarProductos.Location = new System.Drawing.Point(0, 0);
-            this.lblAgregarProductos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgregarProductos.Name = "lblAgregarProductos";
-            this.lblAgregarProductos.Size = new System.Drawing.Size(573, 94);
+            this.lblAgregarProductos.Size = new System.Drawing.Size(430, 76);
             this.lblAgregarProductos.TabIndex = 30;
             this.lblAgregarProductos.Text = "AGREGAR PRODUCTOS";
             this.lblAgregarProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,10 +242,9 @@
             this.lblPrecioVenta.BackColor = System.Drawing.Color.Moccasin;
             this.lblPrecioVenta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioVenta.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(23, 446);
-            this.lblPrecioVenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(17, 362);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(165, 22);
+            this.lblPrecioVenta.Size = new System.Drawing.Size(133, 20);
             this.lblPrecioVenta.TabIndex = 29;
             this.lblPrecioVenta.Text = "Precio de Venta:";
             // 
@@ -264,10 +254,9 @@
             this.lblSaldo.BackColor = System.Drawing.Color.Moccasin;
             this.lblSaldo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblSaldo.Location = new System.Drawing.Point(124, 382);
-            this.lblSaldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaldo.Location = new System.Drawing.Point(93, 310);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(65, 22);
+            this.lblSaldo.Size = new System.Drawing.Size(53, 20);
             this.lblSaldo.TabIndex = 28;
             this.lblSaldo.Text = "Saldo:";
             // 
@@ -277,10 +266,9 @@
             this.lblCategoria.BackColor = System.Drawing.Color.Moccasin;
             this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCategoria.Location = new System.Drawing.Point(77, 320);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Location = new System.Drawing.Point(58, 260);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(109, 22);
+            this.lblCategoria.Size = new System.Drawing.Size(88, 20);
             this.lblCategoria.TabIndex = 27;
             this.lblCategoria.Text = "Categoria:";
             // 
@@ -290,10 +278,9 @@
             this.lblDescripcion.BackColor = System.Drawing.Color.Moccasin;
             this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDescripcion.Location = new System.Drawing.Point(61, 257);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Location = new System.Drawing.Point(46, 209);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(121, 22);
+            this.lblDescripcion.Size = new System.Drawing.Size(100, 20);
             this.lblDescripcion.TabIndex = 26;
             this.lblDescripcion.Text = "Descripcion:";
             // 
@@ -303,10 +290,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.Moccasin;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNombre.Location = new System.Drawing.Point(99, 196);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(74, 159);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(89, 22);
+            this.lblNombre.Size = new System.Drawing.Size(72, 20);
             this.lblNombre.TabIndex = 25;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -316,39 +302,35 @@
             this.lblCodigo.BackColor = System.Drawing.Color.Moccasin;
             this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCodigo.Location = new System.Drawing.Point(104, 129);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(78, 105);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(83, 22);
+            this.lblCodigo.Size = new System.Drawing.Size(68, 20);
             this.lblCodigo.TabIndex = 23;
             this.lblCodigo.Text = "Codigo:";
             // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCodigo.Location = new System.Drawing.Point(220, 129);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.Location = new System.Drawing.Point(165, 105);
             this.txtCodigo.MaxLength = 30;
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(276, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(208, 20);
             this.txtCodigo.TabIndex = 22;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(220, 196);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(165, 159);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(276, 22);
+            this.txtNombre.Size = new System.Drawing.Size(208, 20);
             this.txtNombre.TabIndex = 21;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(220, 257);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescripcion.Location = new System.Drawing.Point(165, 209);
             this.txtDescripcion.MaxLength = 250;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(276, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(208, 20);
             this.txtDescripcion.TabIndex = 20;
             // 
             // btnGuardar
@@ -361,10 +343,10 @@
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnGuardar.Image = global::CpCafeteria.Properties.Resources.save_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(129, 516);
+            this.btnGuardar.Location = new System.Drawing.Point(97, 419);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(147, 37);
+            this.btnGuardar.Size = new System.Drawing.Size(110, 30);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -406,10 +388,10 @@
             this.btnAgregarCategoria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregarCategoria.Image = global::CpCafeteria.Properties.Resources.add_circle_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnAgregarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(1144, 94);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(858, 76);
             this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(0);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(240, 37);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(180, 30);
             this.btnAgregarCategoria.TabIndex = 12;
             this.btnAgregarCategoria.Text = "Agregar Categoria";
             this.btnAgregarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -426,11 +408,10 @@
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEditar.Image = global::CpCafeteria.Properties.Resources.edit_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(153, 94);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(115, 76);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
-            this.btnEditar.Size = new System.Drawing.Size(129, 37);
+            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnEditar.Size = new System.Drawing.Size(97, 30);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -447,10 +428,9 @@
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEliminar.Image = global::CpCafeteria.Properties.Resources.delete_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(291, 94);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(218, 76);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(129, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(97, 30);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -460,10 +440,9 @@
             // pctBuscarObscuro
             // 
             this.pctBuscarObscuro.Image = global::CpCafeteria.Properties.Resources.lupa1;
-            this.pctBuscarObscuro.Location = new System.Drawing.Point(447, 94);
-            this.pctBuscarObscuro.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBuscarObscuro.Location = new System.Drawing.Point(335, 76);
             this.pctBuscarObscuro.Name = "pctBuscarObscuro";
-            this.pctBuscarObscuro.Size = new System.Drawing.Size(316, 37);
+            this.pctBuscarObscuro.Size = new System.Drawing.Size(237, 30);
             this.pctBuscarObscuro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctBuscarObscuro.TabIndex = 9;
             this.pctBuscarObscuro.TabStop = false;
@@ -471,10 +450,9 @@
             // pctBuscar
             // 
             this.pctBuscar.Image = global::CpCafeteria.Properties.Resources.lupa2;
-            this.pctBuscar.Location = new System.Drawing.Point(447, 94);
-            this.pctBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.pctBuscar.Location = new System.Drawing.Point(335, 76);
             this.pctBuscar.Name = "pctBuscar";
-            this.pctBuscar.Size = new System.Drawing.Size(316, 37);
+            this.pctBuscar.Size = new System.Drawing.Size(237, 30);
             this.pctBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctBuscar.TabIndex = 8;
             this.pctBuscar.TabStop = false;
@@ -489,10 +467,9 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregar.Image = global::CpCafeteria.Properties.Resources.add_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(16, 94);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 76);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(129, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(97, 30);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -501,10 +478,10 @@
             // 
             // FrmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
-            this.ClientSize = new System.Drawing.Size(1400, 738);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
             this.Controls.Add(this.pnlAgregar);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.btnEditar);
@@ -516,7 +493,6 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProductos";
             this.Text = "Productos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProductos_FormClosing);
