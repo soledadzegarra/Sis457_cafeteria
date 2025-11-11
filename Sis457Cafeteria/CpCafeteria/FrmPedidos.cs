@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CadCafeteria;
 using ClnCafeteria;
@@ -20,6 +18,8 @@ namespace CpCafeteria
         public FrmPedidos()
         {
             InitializeComponent();
+            // Garantiza que el Load se ejecute aunque no esté asignado en el diseñador
+            this.Load += FrmPedido_Load;
         }
 
         private void FrmPedido_Load(object sender, EventArgs e)
@@ -31,19 +31,45 @@ namespace CpCafeteria
             dgvDetallePedido.AutoGenerateColumns = false;
             ConfigurarDgvDetalle();
             LimpiarFormulario();
+            ConstruirCatalogoProductos(); // Carga el catálogo visual
         }
 
         private void ConfigurarDgvDetalle()
         {
             dgvDetallePedido.Columns.Clear();
-            dgvDetallePedido.Columns.Add("nombreProducto", "Producto");
-            dgvDetallePedido.Columns.Add("cantidad", "Cantidad");
-            dgvDetallePedido.Columns.Add("precioUnitario", "Precio Unitario");
-            dgvDetallePedido.Columns.Add("total", "Total");
-            dgvDetallePedido.Columns["nombreProducto"].DataPropertyName = "Nombre del Producto";
-            dgvDetallePedido.Columns["cantidad"].DataPropertyName = "Cantidad";
-            dgvDetallePedido.Columns["precioUnitario"].DataPropertyName = "Precio Unitario";
-            dgvDetallePedido.Columns["total"].DataPropertyName = "Total";
+
+            var colNombre = new DataGridViewTextBoxColumn
+            {
+                Name = "nombreProducto",
+                HeaderText = "Producto",
+                DataPropertyName = "nombreProducto",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+            var colCantidad = new DataGridViewTextBoxColumn
+            {
+                Name = "cantidad",
+                HeaderText = "Cantidad",
+                DataPropertyName = "cantidad",
+                Width = 80
+            };
+            var colPrecio = new DataGridViewTextBoxColumn
+            {
+                Name = "precioUnitario",
+                HeaderText = "Precio Unitario",
+                DataPropertyName = "precioUnitario",
+                Width = 110,
+                DefaultCellStyle = { Format = "0.00" }
+            };
+            var colTotal = new DataGridViewTextBoxColumn
+            {
+                Name = "total",
+                HeaderText = "Total",
+                DataPropertyName = "total",
+                Width = 110,
+                DefaultCellStyle = { Format = "0.00" }
+            };
+
+            dgvDetallePedido.Columns.AddRange(colNombre, colCantidad, colPrecio, colTotal);
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
@@ -59,6 +85,7 @@ namespace CpCafeteria
             }
         }
 
+        // Mantener botón existente para selección clásica (opcional)
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             var frm = new FrmSeleccionarProducto();
@@ -67,11 +94,18 @@ namespace CpCafeteria
                 var detalle = frm.DetalleSeleccionado;
                 if (detalle != null)
                 {
-
                     var existente = detalles.FirstOrDefault(d => d.idProducto == detalle.idProducto);
                     if (existente != null)
                     {
-                        existente.cantidad += detalle.cantidad;
+                        var producto = ProductoCln.obtenerUno(existente.idProducto);
+                        int nuevaCantidad = existente.cantidad + detalle.cantidad;
+                        if (nuevaCantidad > (int)producto.saldo)
+                        {
+                            MessageBox.Show("La suma excede el stock disponible.", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                        existente.cantidad = nuevaCantidad;
                         existente.total = existente.cantidad * existente.precioUnitario;
                     }
                     else
@@ -93,14 +127,6 @@ namespace CpCafeteria
                 precioUnitario = d.precioUnitario,
                 total = d.total
             }).ToList();
-
-            if (dgvDetallePedido.Columns.Count > 0)
-            {
-                dgvDetallePedido.Columns["nombreProducto"].HeaderText = "Producto";
-                dgvDetallePedido.Columns["cantidad"].HeaderText = "Cantidad";
-                dgvDetallePedido.Columns["precioUnitario"].HeaderText = "Precio Unitario";
-                dgvDetallePedido.Columns["total"].HeaderText = "Total";
-            }
 
             txtTotal.Text = detalles.Sum(d => d.total).ToString("0.00");
             CalcularCambio();
@@ -165,6 +191,7 @@ namespace CpCafeteria
 
             MessageBox.Show("Venta registrada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarFormulario();
+            ConstruirCatalogoProductos(); // refresca el stock mostrado
         }
 
         private void LimpiarFormulario()
@@ -185,6 +212,225 @@ namespace CpCafeteria
         {
             LimpiarFormulario();
             clienteSeleccionado = null;
+            ConstruirCatalogoProductos();
+        }
+
+        // =========================
+        // Catálogo visual de productos
+        // =========================
+        private void ConstruirCatalogoProductos()
+        {
+            if (flpCatalogoProductos == null) return;
+
+            flpCatalogoProductos.SuspendLayout();
+            flpCatalogoProductos.Controls.Clear();
+
+            // 1) Intento principal via EF
+            var productos = ProductoCln.listar();
+
+            // 2) Fallback: si no hay productos, intento vía SP y mapeo
+            if (productos == null || productos.Count == 0)
+            {
+                var listaPa = ProductoCln.listarPa("");
+                if (listaPa != null && listaPa.Count > 0)
+                {
+                    productos = listaPa
+                        .Select(x => ProductoCln.obtenerUno(x.id))
+                        .Where(x => x != null && x.estado != -1)
+                        .ToList();
+                }
+            }
+
+            if (productos != null && productos.Count > 0)
+            {
+                foreach (var p in productos.OrderBy(p => p.nombre))
+                {
+                    var card = CrearCardProducto(p);
+                    flpCatalogoProductos.Controls.Add(card);
+                }
+            }
+            else
+            {
+                // Mensaje amigable cuando no hay datos
+                var lbl = new Label
+                {
+                    Text = "No hay productos activos para mostrar.",
+                    AutoSize = false,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill,
+                    ForeColor = Color.DimGray
+                };
+                flpCatalogoProductos.Controls.Add(lbl);
+            }
+
+            flpCatalogoProductos.ResumeLayout();
+        }
+
+        private Control CrearCardProducto(Producto p)
+        {
+            var panel = new Panel
+            {
+                Width = 160,
+                Height = 230,
+                BackColor = Color.White,
+                Margin = new Padding(8),
+                BorderStyle = BorderStyle.FixedSingle,
+                Tag = p.id
+            };
+
+            var pb = new PictureBox
+            {
+                Width = 140,
+                Height = 120,
+                Location = new Point(10, 10),
+                SizeMode = PictureBoxSizeMode.Zoom,
+                BackColor = Color.Gainsboro // si no hay imagen queda el recuadro gris
+            };
+            CargarImagenProducto(p, pb);
+
+            var lblNombre = new Label
+            {
+                Text = p.nombre,
+                Location = new Point(10, 135),
+                Width = 140,
+                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                AutoSize = false
+            };
+
+            var lblStock = new Label
+            {
+                Text = "Stock: " + p.saldo,
+                Location = new Point(10, 155),
+                Width = 140,
+                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.DimGray,
+                AutoSize = false
+            };
+
+            int maxCantidad = (int)Math.Max(1, Math.Min((double)p.saldo, int.MaxValue));
+            var nudCantidad = new NumericUpDown
+            {
+                Minimum = 1,
+                Maximum = maxCantidad,
+                Value = 1,
+                Width = 60,
+                Location = new Point(10, 180),
+                Font = new Font("Segoe UI", 9),
+                Tag = p.id
+            };
+
+            var btnAgregar = new Button
+            {
+                Text = "Agregar",
+                Width = 70,
+                Height = 26,
+                Location = new Point(80, 180),
+                BackColor = Color.SaddleBrown,
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Tag = new Tuple<int, NumericUpDown>(p.id, nudCantidad),
+                Enabled = p.saldo > 0
+            };
+            btnAgregar.FlatAppearance.BorderSize = 0;
+            btnAgregar.Click += BtnAgregarProductoCatalogo_Click;
+
+            panel.Controls.Add(pb);
+            panel.Controls.Add(lblNombre);
+            panel.Controls.Add(lblStock);
+            panel.Controls.Add(nudCantidad);
+            panel.Controls.Add(btnAgregar);
+
+            return panel;
+        }
+
+        private void CargarImagenProducto(Producto p, PictureBox pb)
+        {
+            try
+            {
+                // Convención: carpeta "ImagesProductos" junto al .exe, archivo = codigo.jpg/png/jpeg
+                var baseDir = Path.Combine(Application.StartupPath, "ImagesProductos");
+                var nombreBase = !string.IsNullOrWhiteSpace(p.codigo) ? p.codigo : p.id.ToString();
+                string[] extensiones = { ".jpg", ".png", ".jpeg" };
+                string ruta = extensiones
+                    .Select(ext => Path.Combine(baseDir, nombreBase + ext))
+                    .FirstOrDefault(File.Exists);
+
+                if (ruta != null)
+                {
+                    using (var tmp = Image.FromFile(ruta))
+                    {
+                        pb.Image = new Bitmap(tmp);
+                    }
+                }
+                // Si no hay imagen, queda el fondo gris sin error
+            }
+            catch
+            {
+                // Evitar romper flujo si la imagen falla
+            }
+        }
+
+        private void BtnAgregarProductoCatalogo_Click(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null && btn.Tag is Tuple<int, NumericUpDown>)
+            {
+                var data = (Tuple<int, NumericUpDown>)btn.Tag;
+                int idProducto = data.Item1;
+                var nud = data.Item2;
+                int cantidad = (int)nud.Value;
+
+                var producto = ProductoCln.obtenerUno(idProducto);
+                if (producto == null)
+                {
+                    MessageBox.Show("Producto no encontrado.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (cantidad <= 0)
+                {
+                    MessageBox.Show("Cantidad inválida.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (cantidad > (int)producto.saldo)
+                {
+                    MessageBox.Show("Cantidad supera el stock disponible.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                AgregarDetalleProducto(producto, cantidad);
+            }
+        }
+
+        private void AgregarDetalleProducto(Producto producto, int cantidad)
+        {
+            var existente = detalles.FirstOrDefault(d => d.idProducto == producto.id);
+            if (existente != null)
+            {
+                int nuevaCantidad = existente.cantidad + cantidad;
+                if (nuevaCantidad > (int)producto.saldo)
+                {
+                    MessageBox.Show("La suma excede el stock.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                existente.cantidad = nuevaCantidad;
+                existente.total = existente.cantidad * existente.precioUnitario;
+            }
+            else
+            {
+                detalles.Add(new DetallePedido
+                {
+                    idProducto = producto.id,
+                    cantidad = cantidad,
+                    precioUnitario = producto.precioVenta,
+                    total = cantidad * producto.precioVenta
+                });
+            }
+
+            RefrescarDetalle();
         }
     }
 }
