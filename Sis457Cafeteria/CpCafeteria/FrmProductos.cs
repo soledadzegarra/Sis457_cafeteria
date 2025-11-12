@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using CadCafeteria;
 using ClnCafeteria;
 
@@ -18,12 +19,19 @@ namespace CpCafeteria
         private bool modoEdicion = false;
         private System.Threading.Timer searchTimer;
         private const int SEARCH_DELAY = 500;
+
+        // Imagen: ruta elegida por el usuario (nueva). Si es null, no hay nueva imagen seleccionada.
+        private string _rutaImagenSeleccionada = null;
+        // Imagen: indicador de que el usuario desea eliminar la imagen existente.
+        private bool _quitarImagen = false;
+        // Ruta actual (sólo informativa para mostrar en la UI)
+        private string _rutaImagenActual = null;
+
         public FrmProductos()
         {
             InitializeComponent();
             pnlAgregar.Visible = false;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
-
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -47,15 +55,8 @@ namespace CpCafeteria
             searchTimer?.Dispose();
         }
 
-        private void txtBuscar_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBuscar_Leave(object sender, EventArgs e)
-        {
-
-        }
+        private void txtBuscar_Enter(object sender, EventArgs e) { }
+        private void txtBuscar_Leave(object sender, EventArgs e) { }
 
         private void listar()
         {
@@ -93,11 +94,15 @@ namespace CpCafeteria
             nudSaldo.Value = 0;
             nudPrecioVenta.Value = 0;
             cbxCategoria.SelectedIndex = -1;
+
+            _rutaImagenSeleccionada = null;
+            _quitarImagen = false;
+            _rutaImagenActual = null;
+            LimpiarImagen();
         }
 
         private void mostrarPanelAgregar()
         {
-
             pnlAgregar.Visible = true;
             pnlAgregar.BringToFront();
 
@@ -175,10 +180,7 @@ namespace CpCafeteria
             listar();
         }
 
-        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e) { }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
@@ -209,6 +211,10 @@ namespace CpCafeteria
             cargarCategorias();
             txtCodigo.Focus();
             modoEdicion = true;
+
+            _quitarImagen = false;
+            _rutaImagenSeleccionada = null;
+            CargarImagenProductoEnPreview(producto);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -223,11 +229,21 @@ namespace CpCafeteria
                 producto.saldo = nudSaldo.Value;
                 producto.precioVenta = nudPrecioVenta.Value;
                 producto.usuarioRegistro = Util.usuario.usuario1;
+
+                string baseDir = Path.Combine(Application.StartupPath, "ImagesProductos");
+                Directory.CreateDirectory(baseDir);
+
                 if (!modoEdicion)
                 {
                     producto.fechaRegistro = DateTime.Now;
                     producto.estado = 1;
-                    ProductoCln.insertar(producto);
+                    int nuevoId = ProductoCln.insertar(producto);
+
+                    // Si seleccionó imagen, copiar por ID
+                    if (!string.IsNullOrWhiteSpace(_rutaImagenSeleccionada))
+                    {
+                        ReemplazarImagenProducto(nuevoId, producto.codigo, baseDir, _rutaImagenSeleccionada);
+                    }
                 }
                 else
                 {
@@ -242,12 +258,22 @@ namespace CpCafeteria
                     productoExistente.precioVenta = nudPrecioVenta.Value;
                     productoExistente.usuarioRegistro = Util.usuario.usuario1;
                     ProductoCln.actualizar(productoExistente);
+
+                    if (_quitarImagen)
+                    {
+                        EliminarImagenesProducto(id, productoExistente.codigo, baseDir);
+                    }
+                    else if (!string.IsNullOrWhiteSpace(_rutaImagenSeleccionada))
+                    {
+                        ReemplazarImagenProducto(id, productoExistente.codigo, baseDir, _rutaImagenSeleccionada);
+                    }
                 }
+
                 ocultarPanelAgregar();
                 limpiar();
                 listar();
                 MessageBox.Show("Producto guardado correctamente", "::: Cafeteria :::",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -275,6 +301,145 @@ namespace CpCafeteria
                 MessageBox.Show("El Producto se ha eliminado correctamente", "::: Cafeteria - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        // ====== IMÁGENES ======
+
+        private void btnSeleccionarImagen_Click(object sender, EventArgs e)
+        {
+            if (ofdImagen == null) return;
+
+            ofdImagen.Filter = "Imágenes|*.jpg;*.jpeg;*.png";
+            ofdImagen.Title = "Seleccionar imagen del producto";
+            if (ofdImagen.ShowDialog() == DialogResult.OK)
+            {
+                _rutaImagenSeleccionada = ofdImagen.FileName;
+                _quitarImagen = false;
+                MostrarImagenPreview(_rutaImagenSeleccionada);
+                if (lblImagenInfo != null)
+                    lblImagenInfo.Text = Path.GetFileName(_rutaImagenSeleccionada);
+            }
+        }
+
+        private void btnQuitarImagen_Click(object sender, EventArgs e)
+        {
+            _rutaImagenSeleccionada = null;
+            _quitarImagen = true;
+            _rutaImagenActual = null;
+            LimpiarImagen();
+            if (lblImagenInfo != null) lblImagenInfo.Text = "(Sin imagen)";
+        }
+
+        private void LimpiarImagen()
+        {
+            if (pbImagenProducto != null)
+            {
+                var img = pbImagenProducto.Image;
+                pbImagenProducto.Image = null;
+                if (img != null) img.Dispose();
+                pbImagenProducto.BackColor = Color.Gainsboro;
+            }
+        }
+
+        private void MostrarImagenPreview(string ruta)
+        {
+            try
+            {
+                if (pbImagenProducto == null || string.IsNullOrWhiteSpace(ruta) || !File.Exists(ruta)) return;
+
+                using (var tmp = Image.FromFile(ruta))
+                {
+                    pbImagenProducto.Image = new Bitmap(tmp);
+                    pbImagenProducto.BackColor = Color.White;
+                }
+            }
+            catch { }
+        }
+
+        private void CargarImagenProductoEnPreview(Producto p)
+        {
+            LimpiarImagen();
+
+            try
+            {
+                string baseDir = Path.Combine(Application.StartupPath, "ImagesProductos");
+                string[] extensiones = { ".jpg", ".png", ".jpeg" };
+
+                string ruta = extensiones
+                    .Select(ext => Path.Combine(baseDir, p.id.ToString() + ext))
+                    .FirstOrDefault(File.Exists);
+
+                if (ruta == null && !string.IsNullOrWhiteSpace(p.codigo))
+                {
+                    ruta = extensiones
+                        .Select(ext => Path.Combine(baseDir, p.codigo + ext))
+                        .FirstOrDefault(File.Exists);
+                }
+
+                _rutaImagenActual = ruta; // sólo informativa
+                if (ruta != null)
+                {
+                    MostrarImagenPreview(ruta);
+                    if (lblImagenInfo != null)
+                        lblImagenInfo.Text = Path.GetFileName(ruta);
+                }
+                else
+                {
+                    if (lblImagenInfo != null) lblImagenInfo.Text = "(Sin imagen)";
+                }
+            }
+            catch { }
+        }
+
+        private void ReemplazarImagenProducto(int idProducto, string codigo, string baseDir, string rutaNueva)
+        {
+            if (string.IsNullOrWhiteSpace(rutaNueva) || !File.Exists(rutaNueva)) return;
+
+            // 1) Eliminar existentes (por ID y por código) para evitar duplicados y extensiones sobrantes
+            EliminarImagenesProducto(idProducto, codigo, baseDir);
+
+            // 2) Copiar nueva por ID
+            string ext = Path.GetExtension(rutaNueva).ToLowerInvariant();
+            if (ext != ".jpg" && ext != ".jpeg" && ext != ".png") return;
+
+            string destinoId = Path.Combine(baseDir, idProducto + ext);
+            // Evitar copiar archivo sobre sí mismo
+            if (!string.Equals(Path.GetFullPath(rutaNueva), Path.GetFullPath(destinoId), StringComparison.OrdinalIgnoreCase))
+            {
+                File.Copy(rutaNueva, destinoId, true);
+            }
+        }
+
+        private void EliminarImagenesProducto(int idProducto, string codigo, string baseDir)
+        {
+            try
+            {
+                string[] exts = { ".jpg", ".jpeg", ".png" };
+
+                // Por ID
+                foreach (var ext in exts)
+                {
+                    var path = Path.Combine(baseDir, idProducto + ext);
+                    if (File.Exists(path))
+                    {
+                        try { File.Delete(path); } catch { }
+                    }
+                }
+
+                // Por código (compatibilidad)
+                if (!string.IsNullOrWhiteSpace(codigo))
+                {
+                    foreach (var ext in exts)
+                    {
+                        var path = Path.Combine(baseDir, codigo + ext);
+                        if (File.Exists(path))
+                        {
+                            try { File.Delete(path); } catch { }
+                        }
+                    }
+                }
+            }
+            catch { }
         }
     }
 }

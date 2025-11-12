@@ -9,7 +9,6 @@ G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCaf
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.pdb
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.csproj.AssemblyReference.cache
-G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe.config
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmAutenticacion.resources
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmPrincipal.resources
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.Properties.Resources.resources
@@ -58,3 +57,4 @@ G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCa
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmProductos.resources
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmSeleccionarProducto.resources
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafete.C6C32759.Up2Date
+G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe.config

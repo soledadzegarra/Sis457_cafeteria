@@ -52,10 +52,10 @@
             this.pnMenu.Controls.Add(this.pctCafeteriaLogo);
             this.pnMenu.Controls.Add(this.btnProductos);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMenu.Location = new System.Drawing.Point(0, 63);
+            this.pnMenu.Location = new System.Drawing.Point(0, 51);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(1400, 81);
+            this.pnMenu.Size = new System.Drawing.Size(1050, 66);
             this.pnMenu.TabIndex = 0;
             this.pnMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMenu_Paint);
             // 
@@ -69,11 +69,10 @@
             this.btnReportePedidos.ForeColor = System.Drawing.Color.PapayaWhip;
             this.btnReportePedidos.Image = global::CpCafeteria.Properties.Resources.area_chart_33dp_FFEFD5_FILL0_wght400_GRAD0_opsz40;
             this.btnReportePedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportePedidos.Location = new System.Drawing.Point(421, 4);
-            this.btnReportePedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReportePedidos.Location = new System.Drawing.Point(316, 3);
             this.btnReportePedidos.Name = "btnReportePedidos";
-            this.btnReportePedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnReportePedidos.Size = new System.Drawing.Size(169, 70);
+            this.btnReportePedidos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnReportePedidos.Size = new System.Drawing.Size(127, 57);
             this.btnReportePedidos.TabIndex = 26;
             this.btnReportePedidos.Text = "Reportes";
             this.btnReportePedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -90,11 +89,10 @@
             this.btnPedidos.ForeColor = System.Drawing.Color.PapayaWhip;
             this.btnPedidos.Image = global::CpCafeteria.Properties.Resources.dine_in_33dp_FFEFD5_FILL0_wght400_GRAD0_opsz40;
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPedidos.Location = new System.Drawing.Point(213, 4);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedidos.Location = new System.Drawing.Point(160, 3);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPedidos.Size = new System.Drawing.Size(197, 74);
+            this.btnPedidos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnPedidos.Size = new System.Drawing.Size(148, 60);
             this.btnPedidos.TabIndex = 24;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -111,11 +109,10 @@
             this.btnClientes.ForeColor = System.Drawing.Color.PapayaWhip;
             this.btnClientes.Image = global::CpCafeteria.Properties.Resources.person_raised_hand_33dp_FFEFD5_FILL0_wght400_GRAD0_opsz40;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClientes.Location = new System.Drawing.Point(1161, 4);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientes.Location = new System.Drawing.Point(871, 3);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnClientes.Size = new System.Drawing.Size(164, 74);
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnClientes.Size = new System.Drawing.Size(123, 60);
             this.btnClientes.TabIndex = 18;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -132,11 +129,10 @@
             this.btnEmpleados.ForeColor = System.Drawing.Color.PapayaWhip;
             this.btnEmpleados.Image = global::CpCafeteria.Properties.Resources.assignment_ind_33dp_FFEFD5_FILL0_wght400_GRAD0_opsz40;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEmpleados.Location = new System.Drawing.Point(833, 4);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpleados.Location = new System.Drawing.Point(625, 3);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEmpleados.Size = new System.Drawing.Size(212, 70);
+            this.btnEmpleados.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEmpleados.Size = new System.Drawing.Size(159, 57);
             this.btnEmpleados.TabIndex = 15;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -147,10 +143,10 @@
             // 
             this.pctCafeteriaLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctCafeteriaLogo.Image = global::CpCafeteria.Properties.Resources.book__1_;
-            this.pctCafeteriaLogo.Location = new System.Drawing.Point(673, 4);
-            this.pctCafeteriaLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pctCafeteriaLogo.Location = new System.Drawing.Point(505, 3);
+            this.pctCafeteriaLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctCafeteriaLogo.Name = "pctCafeteriaLogo";
-            this.pctCafeteriaLogo.Size = new System.Drawing.Size(107, 76);
+            this.pctCafeteriaLogo.Size = new System.Drawing.Size(80, 62);
             this.pctCafeteriaLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctCafeteriaLogo.TabIndex = 0;
             this.pctCafeteriaLogo.TabStop = false;
@@ -166,11 +162,11 @@
             this.btnProductos.ForeColor = System.Drawing.Color.PapayaWhip;
             this.btnProductos.Image = global::CpCafeteria.Properties.Resources.menu_book_2_33dp_FFEFD5_FILL0_wght400_GRAD0_opsz40;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProductos.Location = new System.Drawing.Point(56, 0);
+            this.btnProductos.Location = new System.Drawing.Point(42, 0);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(0);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnProductos.Size = new System.Drawing.Size(137, 78);
+            this.btnProductos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnProductos.Size = new System.Drawing.Size(103, 63);
             this.btnProductos.TabIndex = 1;
             this.btnProductos.Text = "Menú";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -187,9 +183,8 @@
             this.paBarraTitulo.Controls.Add(this.btnCerrar);
             this.paBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.paBarraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.paBarraTitulo.Name = "paBarraTitulo";
-            this.paBarraTitulo.Size = new System.Drawing.Size(1400, 63);
+            this.paBarraTitulo.Size = new System.Drawing.Size(1050, 51);
             this.paBarraTitulo.TabIndex = 1;
             this.paBarraTitulo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.paBarraTitulo_MouseDoubleClick);
             this.paBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.paBarraTitulo_MouseDown);
@@ -199,10 +194,9 @@
             this.btnDeslizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeslizar.FlatAppearance.BorderSize = 0;
             this.btnDeslizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeslizar.Location = new System.Drawing.Point(4, 7);
-            this.btnDeslizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeslizar.Location = new System.Drawing.Point(3, 6);
             this.btnDeslizar.Name = "btnDeslizar";
-            this.btnDeslizar.Size = new System.Drawing.Size(47, 43);
+            this.btnDeslizar.Size = new System.Drawing.Size(35, 35);
             this.btnDeslizar.TabIndex = 9;
             this.btnDeslizar.UseVisualStyleBackColor = true;
             this.btnDeslizar.Click += new System.EventHandler(this.btnDeslizar_Click);
@@ -214,10 +208,10 @@
             this.btnMaximizar.FlatAppearance.BorderSize = 0;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1312, 7);
+            this.btnMaximizar.Location = new System.Drawing.Point(984, 6);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(33, 31);
+            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnMaximizar.TabIndex = 8;
             this.btnMaximizar.UseVisualStyleBackColor = true;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -229,10 +223,10 @@
             this.btnRestaurar.FlatAppearance.BorderSize = 0;
             this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1312, 7);
+            this.btnRestaurar.Location = new System.Drawing.Point(984, 6);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(0);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(33, 31);
+            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnRestaurar.TabIndex = 7;
             this.btnRestaurar.UseVisualStyleBackColor = true;
             this.btnRestaurar.Visible = false;
@@ -245,10 +239,10 @@
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1272, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(954, 6);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(33, 31);
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
             this.btnMinimizar.TabIndex = 6;
             this.btnMinimizar.UseVisualStyleBackColor = true;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -261,10 +255,10 @@
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1352, 7);
+            this.btnCerrar.Location = new System.Drawing.Point(1014, 6);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -278,9 +272,8 @@
             this.pnContenedor.Controls.Add(this.paBarraTitulo);
             this.pnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContenedor.Location = new System.Drawing.Point(0, 0);
-            this.pnContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.pnContenedor.Name = "pnContenedor";
-            this.pnContenedor.Size = new System.Drawing.Size(1400, 862);
+            this.pnContenedor.Size = new System.Drawing.Size(1050, 750);
             this.pnContenedor.TabIndex = 2;
             this.pnContenedor.Click += new System.EventHandler(this.pctCafeteriaLogo_Click);
             // 
@@ -289,10 +282,9 @@
             this.lblReloj.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblReloj.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReloj.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblReloj.Location = new System.Drawing.Point(1086, 782);
-            this.lblReloj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReloj.Location = new System.Drawing.Point(814, 635);
             this.lblReloj.Name = "lblReloj";
-            this.lblReloj.Size = new System.Drawing.Size(239, 71);
+            this.lblReloj.Size = new System.Drawing.Size(179, 58);
             this.lblReloj.TabIndex = 2;
             this.lblReloj.Text = "xxxx";
             this.lblReloj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,10 +293,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CpCafeteria.Properties.Resources.logoCafe2_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(359, 228);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(269, 185);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(805, 512);
+            this.pictureBox1.Size = new System.Drawing.Size(604, 416);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -316,12 +308,12 @@
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 862);
+            this.ClientSize = new System.Drawing.Size(1050, 750);
             this.Controls.Add(this.pnContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";

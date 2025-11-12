@@ -347,13 +347,21 @@ namespace CpCafeteria
         {
             try
             {
-                // Convención: carpeta "ImagesProductos" junto al .exe, archivo = codigo.jpg/png/jpeg
                 var baseDir = Path.Combine(Application.StartupPath, "ImagesProductos");
-                var nombreBase = !string.IsNullOrWhiteSpace(p.codigo) ? p.codigo : p.id.ToString();
                 string[] extensiones = { ".jpg", ".png", ".jpeg" };
+
+                // 1) Buscar por ID (recomendado)
                 string ruta = extensiones
-                    .Select(ext => Path.Combine(baseDir, nombreBase + ext))
+                    .Select(ext => Path.Combine(baseDir, p.id.ToString() + ext))
                     .FirstOrDefault(File.Exists);
+
+                // 2) Respaldo: buscar por código si existe
+                if (ruta == null && !string.IsNullOrWhiteSpace(p.codigo))
+                {
+                    ruta = extensiones
+                        .Select(ext => Path.Combine(baseDir, p.codigo + ext))
+                        .FirstOrDefault(File.Exists);
+                }
 
                 if (ruta != null)
                 {
@@ -361,8 +369,14 @@ namespace CpCafeteria
                     {
                         pb.Image = new Bitmap(tmp);
                     }
+                    pb.BackColor = Color.White;
                 }
-                // Si no hay imagen, queda el fondo gris sin error
+                else
+                {
+                    // Sin imagen: dejamos el fondo gris
+                    pb.Image = null;
+                    pb.BackColor = Color.Gainsboro;
+                }
             }
             catch
             {

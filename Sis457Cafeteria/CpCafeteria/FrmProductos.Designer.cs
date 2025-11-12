@@ -35,6 +35,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pnListaProductos = new System.Windows.Forms.Panel();
             this.pnlAgregar = new System.Windows.Forms.Panel();
+            this.lblImagenInfo = new System.Windows.Forms.Label();
+            this.btnQuitarImagen = new System.Windows.Forms.Button();
+            this.btnSeleccionarImagen = new System.Windows.Forms.Button();
+            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.btnCerrarAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
@@ -63,9 +67,11 @@
             this.pctBuscarObscuro = new System.Windows.Forms.PictureBox();
             this.pctBuscar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.ofdImagen = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.pnListaProductos.SuspendLayout();
             this.pnlAgregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSaldo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCodigo)).BeginInit();
@@ -132,6 +138,10 @@
             this.pnlAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlAgregar.BackColor = System.Drawing.Color.Moccasin;
             this.pnlAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAgregar.Controls.Add(this.lblImagenInfo);
+            this.pnlAgregar.Controls.Add(this.btnQuitarImagen);
+            this.pnlAgregar.Controls.Add(this.btnSeleccionarImagen);
+            this.pnlAgregar.Controls.Add(this.pbImagenProducto);
             this.pnlAgregar.Controls.Add(this.btnCerrarAgregar);
             this.pnlAgregar.Controls.Add(this.btnCancelar);
             this.pnlAgregar.Controls.Add(this.cbxCategoria);
@@ -152,6 +162,55 @@
             this.pnlAgregar.Name = "pnlAgregar";
             this.pnlAgregar.Size = new System.Drawing.Size(432, 496);
             this.pnlAgregar.TabIndex = 13;
+            // 
+            // lblImagenInfo
+            // 
+            this.lblImagenInfo.AutoSize = true;
+            this.lblImagenInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagenInfo.Location = new System.Drawing.Point(221, 384);
+            this.lblImagenInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblImagenInfo.Name = "lblImagenInfo";
+            this.lblImagenInfo.Size = new System.Drawing.Size(0, 13);
+            this.lblImagenInfo.TabIndex = 38;
+            // 
+            // btnQuitarImagen
+            // 
+            this.btnQuitarImagen.BackColor = System.Drawing.Color.Red;
+            this.btnQuitarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarImagen.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarImagen.Location = new System.Drawing.Point(47, 349);
+            this.btnQuitarImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitarImagen.Name = "btnQuitarImagen";
+            this.btnQuitarImagen.Size = new System.Drawing.Size(143, 24);
+            this.btnQuitarImagen.TabIndex = 37;
+            this.btnQuitarImagen.Text = "Quitar imagen";
+            this.btnQuitarImagen.UseVisualStyleBackColor = false;
+            this.btnQuitarImagen.Click += new System.EventHandler(this.btnQuitarImagen_Click);
+            // 
+            // btnSeleccionarImagen
+            // 
+            this.btnSeleccionarImagen.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSeleccionarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionarImagen.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(47, 319);
+            this.btnSeleccionarImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(143, 24);
+            this.btnSeleccionarImagen.TabIndex = 36;
+            this.btnSeleccionarImagen.Text = "Seleccionar imagen";
+            this.btnSeleccionarImagen.UseVisualStyleBackColor = false;
+            this.btnSeleccionarImagen.Click += new System.EventHandler(this.btnSeleccionarImagen_Click);
+            // 
+            // pbImagenProducto
+            // 
+            this.pbImagenProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImagenProducto.Location = new System.Drawing.Point(230, 319);
+            this.pbImagenProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbImagenProducto.Name = "pbImagenProducto";
+            this.pbImagenProducto.Size = new System.Drawing.Size(88, 54);
+            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagenProducto.TabIndex = 35;
+            this.pbImagenProducto.TabStop = false;
             // 
             // btnCerrarAgregar
             // 
@@ -194,14 +253,14 @@
             // 
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(165, 260);
+            this.cbxCategoria.Location = new System.Drawing.Point(179, 195);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(208, 21);
             this.cbxCategoria.TabIndex = 33;
             // 
             // nudPrecioVenta
             // 
-            this.nudPrecioVenta.Location = new System.Drawing.Point(165, 362);
+            this.nudPrecioVenta.Location = new System.Drawing.Point(178, 273);
             this.nudPrecioVenta.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -213,7 +272,7 @@
             // 
             // nudSaldo
             // 
-            this.nudSaldo.Location = new System.Drawing.Point(165, 313);
+            this.nudSaldo.Location = new System.Drawing.Point(178, 235);
             this.nudSaldo.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -242,7 +301,7 @@
             this.lblPrecioVenta.BackColor = System.Drawing.Color.Moccasin;
             this.lblPrecioVenta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioVenta.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(17, 362);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(30, 273);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
             this.lblPrecioVenta.Size = new System.Drawing.Size(133, 20);
             this.lblPrecioVenta.TabIndex = 29;
@@ -254,7 +313,7 @@
             this.lblSaldo.BackColor = System.Drawing.Color.Moccasin;
             this.lblSaldo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblSaldo.Location = new System.Drawing.Point(93, 310);
+            this.lblSaldo.Location = new System.Drawing.Point(106, 235);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(53, 20);
             this.lblSaldo.TabIndex = 28;
@@ -266,7 +325,7 @@
             this.lblCategoria.BackColor = System.Drawing.Color.Moccasin;
             this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCategoria.Location = new System.Drawing.Point(58, 260);
+            this.lblCategoria.Location = new System.Drawing.Point(72, 195);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(88, 20);
             this.lblCategoria.TabIndex = 27;
@@ -278,7 +337,7 @@
             this.lblDescripcion.BackColor = System.Drawing.Color.Moccasin;
             this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDescripcion.Location = new System.Drawing.Point(46, 209);
+            this.lblDescripcion.Location = new System.Drawing.Point(60, 158);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(100, 20);
             this.lblDescripcion.TabIndex = 26;
@@ -290,7 +349,7 @@
             this.lblNombre.BackColor = System.Drawing.Color.Moccasin;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNombre.Location = new System.Drawing.Point(74, 159);
+            this.lblNombre.Location = new System.Drawing.Point(88, 119);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(72, 20);
             this.lblNombre.TabIndex = 25;
@@ -302,7 +361,7 @@
             this.lblCodigo.BackColor = System.Drawing.Color.Moccasin;
             this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCodigo.Location = new System.Drawing.Point(78, 105);
+            this.lblCodigo.Location = new System.Drawing.Point(92, 80);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(68, 20);
             this.lblCodigo.TabIndex = 23;
@@ -311,7 +370,7 @@
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCodigo.Location = new System.Drawing.Point(165, 105);
+            this.txtCodigo.Location = new System.Drawing.Point(178, 80);
             this.txtCodigo.MaxLength = 30;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(208, 20);
@@ -319,7 +378,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(165, 159);
+            this.txtNombre.Location = new System.Drawing.Point(178, 119);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(208, 20);
@@ -327,7 +386,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(165, 209);
+            this.txtDescripcion.Location = new System.Drawing.Point(179, 158);
             this.txtDescripcion.MaxLength = 250;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(208, 20);
@@ -476,6 +535,11 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // ofdImagen
+            // 
+            this.ofdImagen.FileName = "openFileDialog1";
+            this.ofdImagen.Filter = "Imágenes|.jpg;.jpeg;*.png";
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,6 +566,7 @@
             this.pnListaProductos.PerformLayout();
             this.pnlAgregar.ResumeLayout(false);
             this.pnlAgregar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSaldo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCodigo)).EndInit();
@@ -552,5 +617,10 @@
         private System.Windows.Forms.ErrorProvider erpCategoria;
         private System.Windows.Forms.ErrorProvider erpSaldo;
         private System.Windows.Forms.ErrorProvider erpPrecioVenta;
+        private System.Windows.Forms.Button btnSeleccionarImagen;
+        private System.Windows.Forms.PictureBox pbImagenProducto;
+        private System.Windows.Forms.Label lblImagenInfo;
+        private System.Windows.Forms.Button btnQuitarImagen;
+        private System.Windows.Forms.OpenFileDialog ofdImagen;
     }
 }
