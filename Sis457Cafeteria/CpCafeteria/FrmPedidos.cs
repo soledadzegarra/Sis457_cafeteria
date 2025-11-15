@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using CadCafeteria;
 using ClnCafeteria;
+using System.ComponentModel;
 
 namespace CpCafeteria
 {
@@ -147,6 +148,12 @@ namespace CpCafeteria
 
         private void btnGuardarPedido_Click(object sender, EventArgs e)
         {
+            // Forzar validación de todos los NumericUpDown (dispara Validating)
+            if (!ValidateChildren()) return;
+
+            // Asegurar que 'detalles' refleje lo escrito en los NumericUpDown
+            SincronizarDetallesDesdeCatalogo();
+
             if (clienteSeleccionado == null)
             {
                 MessageBox.Show("Debe seleccionar un cliente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -191,7 +198,7 @@ namespace CpCafeteria
 
             MessageBox.Show("Venta registrada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarFormulario();
-            ConstruirCatalogoProductos(); // refresca el stock mostrado
+            ConstruirCatalogoProductos();
         }
 
         private void LimpiarFormulario()
@@ -284,7 +291,7 @@ namespace CpCafeteria
                 Height = 120,
                 Location = new Point(10, 10),
                 SizeMode = PictureBoxSizeMode.Zoom,
-                BackColor = Color.Gainsboro // si no hay imagen queda el recuadro gris
+                BackColor = Color.Gainsboro
             };
             CargarImagenProducto(p, pb);
 
@@ -297,50 +304,183 @@ namespace CpCafeteria
                 AutoSize = false
             };
 
-            var lblStock = new Label
+            var lblPrecio = new Label
             {
-                Text = "Stock: " + p.saldo,
+                Text = "Precio: " + p.precioVenta.ToString("0.00"),
                 Location = new Point(10, 155),
-                Width = 140,
+                Width = 75,
                 Font = new Font("Segoe UI", 8),
                 ForeColor = Color.DimGray,
                 AutoSize = false
             };
 
-            int maxCantidad = (int)Math.Max(1, Math.Min((double)p.saldo, int.MaxValue));
+            var lblStock = new Label
+            {
+                Text = "Stock: " + p.saldo,
+                Location = new Point(85, 155),
+                Width = 65,
+                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.DimGray,
+                TextAlign = ContentAlignment.TopRight,
+                AutoSize = false
+            };
+
+            int maxCantidad = (int)Math.Max(0, Math.Min((double)p.saldo, int.MaxValue));
             var nudCantidad = new NumericUpDown
             {
-                Minimum = 1,
+                Minimum = 0,
                 Maximum = maxCantidad,
-                Value = 1,
+                Value = 0,
                 Width = 60,
                 Location = new Point(10, 180),
                 Font = new Font("Segoe UI", 9),
-                Tag = p.id
+                Tag = p.id,
+                ReadOnly = true // Solo flechas/rueda; bloquea tipeo y pegado
             };
 
-            var btnAgregar = new Button
-            {
-                Text = "Agregar",
-                Width = 70,
-                Height = 26,
-                Location = new Point(80, 180),
-                BackColor = Color.SaddleBrown,
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Tag = new Tuple<int, NumericUpDown>(p.id, nudCantidad),
-                Enabled = p.saldo > 0
-            };
-            btnAgregar.FlatAppearance.BorderSize = 0;
-            btnAgregar.Click += BtnAgregarProductoCatalogo_Click;
+            // Mantén solo ValueChanged (el Max y esta validación cubren el stock)
+            nudCantidad.ValueChanged += NudCantidad_ValueChanged;
 
             panel.Controls.Add(pb);
             panel.Controls.Add(lblNombre);
+            panel.Controls.Add(lblPrecio);
             panel.Controls.Add(lblStock);
             panel.Controls.Add(nudCantidad);
-            panel.Controls.Add(btnAgregar);
 
             return panel;
+        }
+
+        private void NudCantidad_Validating(object sender, CancelEventArgs e)
+        {
+            var nud = sender as NumericUpDown;
+            if (nud == null) return;
+
+            int idProducto = (int)nud.Tag;
+            var producto = ProductoCln.obtenerUno(idProducto);
+            if (producto == null) return;
+
+            int typed;
+            // Tomar lo escrito (texto) para validar contra stock
+            if (!int.TryParse(nud.Text, out typed))
+                typed = (int)nud.Value;
+
+            int stock = (int)producto.saldo;
+            if (typed > stock)
+            {
+                MessageBox.Show("La suma excede el stock disponible.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Ajusta al stock y dispara ValueChanged para sincronizar 'detalles' y total
+                nud.Value = stock;
+                // No cancelamos porque ya corregimos el valor
+                // e.Cancel = true; // si prefieres que permanezca el foco, descomenta esta línea
+            }
+        }
+
+        private void NudCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            var nud = sender as NumericUpDown;
+            if (nud == null) return;
+
+            int idProducto = (int)nud.Tag;
+            int cantidad = (int)nud.Value;
+
+            var producto = ProductoCln.obtenerUno(idProducto);
+            if (producto == null) return;
+
+            // Seguridad extra (el Max ya lo impide, pero validamos igual)
+            int stock = (int)producto.saldo;
+            if (cantidad > stock)
+            {
+                MessageBox.Show("La suma excede el stock disponible.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                nud.Value = stock;
+                cantidad = stock;
+            }
+
+            var existente = detalles.FirstOrDefault(d => d.idProducto == idProducto);
+
+            if (cantidad <= 0)
+            {
+                if (existente != null)
+                    detalles.Remove(existente);
+            }
+            else
+            {
+                if (existente == null)
+                {
+                    detalles.Add(new DetallePedido
+                    {
+                        idProducto = idProducto,
+                        cantidad = cantidad,
+                        precioUnitario = producto.precioVenta,
+                        total = cantidad * producto.precioVenta
+                    });
+                }
+                else
+                {
+                    existente.cantidad = cantidad;
+                    existente.precioUnitario = producto.precioVenta; // por si cambió
+                    existente.total = cantidad * producto.precioVenta;
+                }
+            }
+
+            RefrescarDetalle();
+        }
+
+        private void NudCantidad_Leave(object sender, EventArgs e)
+        {
+            var nud = sender as NumericUpDown;
+            if (nud == null) return;
+
+            int idProducto = (int)nud.Tag;
+            var producto = ProductoCln.obtenerUno(idProducto);
+            if (producto == null) return;
+
+            int typed;
+            if (int.TryParse(nud.Text, out typed))
+            {
+                int stock = (int)producto.saldo;
+                if (typed > stock)
+                {
+                    MessageBox.Show("La suma excede el stock disponible.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    nud.Value = stock; // esto disparará NudCantidad_ValueChanged y actualizará el total
+                }
+            }
+        }
+
+        private void SincronizarDetallesDesdeCatalogo()
+        {
+            if (flpCatalogoProductos == null) return;
+
+            var nuevos = new List<DetallePedido>();
+            foreach (Control card in flpCatalogoProductos.Controls)
+            {
+                var nud = card.Controls.OfType<NumericUpDown>().FirstOrDefault();
+                if (nud == null) continue;
+
+                int cantidad = (int)nud.Value;
+                if (cantidad <= 0) continue;
+
+                int idProducto = (int)nud.Tag;
+                var producto = ProductoCln.obtenerUno(idProducto);
+                if (producto == null) continue;
+
+                int stock = (int)producto.saldo;
+                if (cantidad > stock) cantidad = stock; // seguridad
+
+                nuevos.Add(new DetallePedido
+                {
+                    idProducto = idProducto,
+                    cantidad = cantidad,
+                    precioUnitario = producto.precioVenta,
+                    total = cantidad * producto.precioVenta
+                });
+            }
+
+            detalles = nuevos;
+            RefrescarDetalle();
         }
 
         private void CargarImagenProducto(Producto p, PictureBox pb)

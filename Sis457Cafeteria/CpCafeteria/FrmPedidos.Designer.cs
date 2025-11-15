@@ -47,7 +47,6 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardarPedido = new System.Windows.Forms.Button();
-            this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.flpCatalogoProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.pnListaProductos.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,8 +59,9 @@
             this.pnListaProductos.Controls.Add(this.lblPedidos);
             this.pnListaProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnListaProductos.Location = new System.Drawing.Point(0, 0);
+            this.pnListaProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnListaProductos.Name = "pnListaProductos";
-            this.pnListaProductos.Size = new System.Drawing.Size(1050, 42);
+            this.pnListaProductos.Size = new System.Drawing.Size(1400, 52);
             this.pnListaProductos.TabIndex = 9;
             // 
             // lblPedidos
@@ -69,9 +69,10 @@
             this.lblPedidos.AutoSize = true;
             this.lblPedidos.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPedidos.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.lblPedidos.Location = new System.Drawing.Point(3, 0);
+            this.lblPedidos.Location = new System.Drawing.Point(4, 0);
+            this.lblPedidos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPedidos.Name = "lblPedidos";
-            this.lblPedidos.Size = new System.Drawing.Size(270, 38);
+            this.lblPedidos.Size = new System.Drawing.Size(339, 47);
             this.lblPedidos.TabIndex = 5;
             this.lblPedidos.Text = "Registro Pedidos";
             // 
@@ -80,9 +81,10 @@
             this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFecha.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Enabled = false;
-            this.dtpFecha.Location = new System.Drawing.Point(267, 46);
+            this.dtpFecha.Location = new System.Drawing.Point(356, 57);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(233, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(309, 22);
             this.dtpFecha.TabIndex = 11;
             // 
             // lblFecha
@@ -90,9 +92,10 @@
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(189, 45);
+            this.lblFecha.Location = new System.Drawing.Point(252, 55);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(73, 22);
+            this.lblFecha.Size = new System.Drawing.Size(95, 30);
             this.lblFecha.TabIndex = 10;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -104,28 +107,32 @@
             this.groupBox1.Controls.Add(this.txtCedulaCliente);
             this.groupBox1.Controls.Add(this.lblCedulaIdentidad);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(30, 92);
+            this.groupBox1.Location = new System.Drawing.Point(40, 113);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(416, 121);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(555, 149);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Cliente";
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(86, 75);
+            this.txtNombreCliente.Location = new System.Drawing.Point(115, 92);
+            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
-            this.txtNombreCliente.Size = new System.Drawing.Size(247, 23);
+            this.txtNombreCliente.Size = new System.Drawing.Size(328, 27);
             this.txtNombreCliente.TabIndex = 8;
             // 
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
             this.lblNombreCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCliente.Location = new System.Drawing.Point(6, 77);
+            this.lblNombreCliente.Location = new System.Drawing.Point(8, 95);
+            this.lblNombreCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(77, 21);
+            this.lblNombreCliente.Size = new System.Drawing.Size(95, 23);
             this.lblNombreCliente.TabIndex = 7;
             this.lblNombreCliente.Text = "Nombre:";
             // 
@@ -135,10 +142,11 @@
             this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCliente.Image = global::CpCafeteria.Properties.Resources.search_23dp_EAC452_FILL0_wght400_GRAD0_opsz24;
             this.btnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(352, 16);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(469, 20);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnBuscarCliente.Size = new System.Drawing.Size(47, 35);
+            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(63, 43);
             this.btnBuscarCliente.TabIndex = 5;
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
@@ -146,18 +154,20 @@
             // 
             // txtCedulaCliente
             // 
-            this.txtCedulaCliente.Location = new System.Drawing.Point(86, 25);
+            this.txtCedulaCliente.Location = new System.Drawing.Point(115, 31);
+            this.txtCedulaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCedulaCliente.Name = "txtCedulaCliente";
-            this.txtCedulaCliente.Size = new System.Drawing.Size(247, 23);
+            this.txtCedulaCliente.Size = new System.Drawing.Size(328, 27);
             this.txtCedulaCliente.TabIndex = 6;
             // 
             // lblCedulaIdentidad
             // 
             this.lblCedulaIdentidad.AutoSize = true;
             this.lblCedulaIdentidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaIdentidad.Location = new System.Drawing.Point(22, 26);
+            this.lblCedulaIdentidad.Location = new System.Drawing.Point(29, 32);
+            this.lblCedulaIdentidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCedulaIdentidad.Name = "lblCedulaIdentidad";
-            this.lblCedulaIdentidad.Size = new System.Drawing.Size(64, 21);
+            this.lblCedulaIdentidad.Size = new System.Drawing.Size(73, 23);
             this.lblCedulaIdentidad.TabIndex = 5;
             this.lblCedulaIdentidad.Text = "NIT/CI:";
             // 
@@ -167,22 +177,24 @@
             this.dgvDetallePedido.AllowUserToDeleteRows = false;
             this.dgvDetallePedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetallePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetallePedido.Location = new System.Drawing.Point(12, 219);
+            this.dgvDetallePedido.Location = new System.Drawing.Point(16, 270);
+            this.dgvDetallePedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDetallePedido.Name = "dgvDetallePedido";
             this.dgvDetallePedido.ReadOnly = true;
             this.dgvDetallePedido.RowHeadersWidth = 51;
             this.dgvDetallePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetallePedido.Size = new System.Drawing.Size(472, 125);
+            this.dgvDetallePedido.Size = new System.Drawing.Size(629, 154);
             this.dgvDetallePedido.TabIndex = 13;
             // 
             // txtCambio
             // 
             this.txtCambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCambio.Enabled = false;
-            this.txtCambio.Location = new System.Drawing.Point(235, 407);
+            this.txtCambio.Location = new System.Drawing.Point(313, 501);
+            this.txtCambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.ReadOnly = true;
-            this.txtCambio.Size = new System.Drawing.Size(101, 20);
+            this.txtCambio.Size = new System.Drawing.Size(133, 22);
             this.txtCambio.TabIndex = 21;
             // 
             // lblCambio
@@ -190,18 +202,20 @@
             this.lblCambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCambio.AutoSize = true;
             this.lblCambio.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambio.Location = new System.Drawing.Point(121, 403);
+            this.lblCambio.Location = new System.Drawing.Point(161, 496);
+            this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(98, 24);
+            this.lblCambio.Size = new System.Drawing.Size(130, 33);
             this.lblCambio.TabIndex = 20;
             this.lblCambio.Text = "Cambio:";
             // 
             // txtEfectivo
             // 
             this.txtEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEfectivo.Location = new System.Drawing.Point(235, 381);
+            this.txtEfectivo.Location = new System.Drawing.Point(313, 469);
+            this.txtEfectivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEfectivo.Name = "txtEfectivo";
-            this.txtEfectivo.Size = new System.Drawing.Size(101, 20);
+            this.txtEfectivo.Size = new System.Drawing.Size(133, 22);
             this.txtEfectivo.TabIndex = 19;
             this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
             // 
@@ -210,9 +224,10 @@
             this.lblEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEfectivo.Location = new System.Drawing.Point(121, 377);
+            this.lblEfectivo.Location = new System.Drawing.Point(161, 464);
+            this.lblEfectivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEfectivo.Name = "lblEfectivo";
-            this.lblEfectivo.Size = new System.Drawing.Size(98, 24);
+            this.lblEfectivo.Size = new System.Drawing.Size(130, 33);
             this.lblEfectivo.TabIndex = 18;
             this.lblEfectivo.Text = "Efectivo:";
             // 
@@ -220,10 +235,11 @@
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(235, 353);
+            this.txtTotal.Location = new System.Drawing.Point(313, 434);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(101, 20);
+            this.txtTotal.Size = new System.Drawing.Size(133, 22);
             this.txtTotal.TabIndex = 17;
             // 
             // lblTotal
@@ -231,9 +247,10 @@
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(156, 353);
+            this.lblTotal.Location = new System.Drawing.Point(208, 434);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(63, 24);
+            this.lblTotal.Size = new System.Drawing.Size(85, 33);
             this.lblTotal.TabIndex = 16;
             this.lblTotal.Text = "Total:";
             // 
@@ -247,11 +264,11 @@
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnActualizar.Image = global::CpCafeteria.Properties.Resources.refresh_25dp_000000_FILL0_wght400_GRAD0_opsz2422;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(230, 504);
+            this.btnActualizar.Location = new System.Drawing.Point(307, 620);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Padding = new System.Windows.Forms.Padding(3, 0, 10, 0);
-            this.btnActualizar.Size = new System.Drawing.Size(129, 30);
+            this.btnActualizar.Padding = new System.Windows.Forms.Padding(4, 0, 13, 0);
+            this.btnActualizar.Size = new System.Drawing.Size(172, 37);
             this.btnActualizar.TabIndex = 35;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -268,54 +285,34 @@
             this.btnGuardarPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnGuardarPedido.Image = global::CpCafeteria.Properties.Resources.save_25dp_000000_FILL0_wght400_GRAD0_opsz24;
             this.btnGuardarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarPedido.Location = new System.Drawing.Point(75, 504);
+            this.btnGuardarPedido.Location = new System.Drawing.Point(100, 620);
             this.btnGuardarPedido.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuardarPedido.Name = "btnGuardarPedido";
-            this.btnGuardarPedido.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnGuardarPedido.Size = new System.Drawing.Size(129, 30);
+            this.btnGuardarPedido.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
+            this.btnGuardarPedido.Size = new System.Drawing.Size(172, 37);
             this.btnGuardarPedido.TabIndex = 15;
             this.btnGuardarPedido.Text = "Guardar";
             this.btnGuardarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarPedido.UseVisualStyleBackColor = false;
             this.btnGuardarPedido.Click += new System.EventHandler(this.btnGuardarPedido_Click);
             // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgregarProducto.Image = global::CpCafeteria.Properties.Resources.add_shopping_cart_25dp_000000_FILL0_wght400_GRAD0_opsz24;
-            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(140, 456);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(180, 30);
-            this.btnAgregarProducto.TabIndex = 14;
-            this.btnAgregarProducto.Text = "Agregar Producto";
-            this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
             // flpCatalogoProductos
             // 
             this.flpCatalogoProductos.AutoScroll = true;
             this.flpCatalogoProductos.BackColor = System.Drawing.Color.SandyBrown;
             this.flpCatalogoProductos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flpCatalogoProductos.Location = new System.Drawing.Point(508, 42);
-            this.flpCatalogoProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpCatalogoProductos.Location = new System.Drawing.Point(677, 52);
+            this.flpCatalogoProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpCatalogoProductos.Name = "flpCatalogoProductos";
-            this.flpCatalogoProductos.Size = new System.Drawing.Size(542, 558);
+            this.flpCatalogoProductos.Size = new System.Drawing.Size(723, 686);
             this.flpCatalogoProductos.TabIndex = 36;
             // 
             // FrmPedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.ClientSize = new System.Drawing.Size(1400, 738);
             this.Controls.Add(this.dgvDetallePedido);
             this.Controls.Add(this.flpCatalogoProductos);
             this.Controls.Add(this.btnActualizar);
@@ -326,12 +323,12 @@
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnGuardarPedido);
-            this.Controls.Add(this.btnAgregarProducto);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.pnListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPedidos";
             this.Text = "FrmPedidos";
             this.pnListaProductos.ResumeLayout(false);
@@ -357,7 +354,6 @@
         private System.Windows.Forms.TextBox txtCedulaCliente;
         private System.Windows.Forms.Label lblCedulaIdentidad;
         private System.Windows.Forms.DataGridView dgvDetallePedido;
-        private System.Windows.Forms.Button btnAgregarProducto;
         private System.Windows.Forms.Button btnGuardarPedido;
         private System.Windows.Forms.TextBox txtCambio;
         private System.Windows.Forms.Label lblCambio;
