@@ -15,6 +15,9 @@ namespace CpCafeteria
     {
         private List<DetallePedido> detalles = new List<DetallePedido>();
         private Cliente clienteSeleccionado = null;
+        private System.Windows.Forms.Timer catalogoSearchTimer;
+        private const int CATALOGO_SEARCH_DELAY = 300;
+        private bool _construyendoCatalogo = false;
 
         public FrmPedidos()
         {
@@ -32,7 +35,52 @@ namespace CpCafeteria
             dgvDetallePedido.AutoGenerateColumns = false;
             ConfigurarDgvDetalle();
             LimpiarFormulario();
+
+            // Suscribir búsqueda (asegúrate de crear un TextBox llamado txtBuscarProducto en el diseñador)
+            if (txtBuscarProducto != null)
+                txtBuscarProducto.TextChanged += txtBuscarProducto_TextChanged;
+
             ConstruirCatalogoProductos(); // Carga el catálogo visual
+        }
+
+        // 3. Agrega el manejador con retraso (debounce) para evitar reconstruir en cada pulsación:
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (catalogoSearchTimer != null)
+            {
+                catalogoSearchTimer.Stop();
+                catalogoSearchTimer.Tick -= CatalogoSearchTimer_Tick;
+                catalogoSearchTimer.Dispose();
+                catalogoSearchTimer = null;
+            }
+
+            catalogoSearchTimer = new Timer();
+            catalogoSearchTimer.Interval = CATALOGO_SEARCH_DELAY;
+            catalogoSearchTimer.Tick += CatalogoSearchTimer_Tick;
+            catalogoSearchTimer.Start();
+        }
+
+        private void CatalogoSearchTimer_Tick(object sender, EventArgs e)
+        {
+            catalogoSearchTimer.Stop();
+            catalogoSearchTimer.Tick -= CatalogoSearchTimer_Tick;
+            catalogoSearchTimer.Dispose();
+            catalogoSearchTimer = null;
+            AplicarFiltroCatalogo();
+        }
+
+
+        // 6. (Opcional) En FormClosing si deseas limpiar el timer:
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (catalogoSearchTimer != null)
+            {
+                catalogoSearchTimer.Stop();
+                catalogoSearchTimer.Tick -= CatalogoSearchTimer_Tick;
+                catalogoSearchTimer.Dispose();
+                catalogoSearchTimer = null;
+            }
+            base.OnFormClosing(e);
         }
 
         private void ConfigurarDgvDetalle()
@@ -222,55 +270,96 @@ namespace CpCafeteria
             ConstruirCatalogoProductos();
         }
 
-        // =========================
-        // Catálogo visual de productos
-        // =========================
+        private void AplicarFiltroCatalogo()
+        {
+            ConstruirCatalogoProductos();
+        }
+
+
+        // Reemplaza TODO el método ConstruirCatalogoProductos por este
+        // Reemplaza el método ConstruirCatalogoProductos por esta versión (añade llamada a ReordenarTodosCardsSegunCantidad)
         private void ConstruirCatalogoProductos()
         {
             if (flpCatalogoProductos == null) return;
 
+            string filtro = txtBuscarProducto != null ? txtBuscarProducto.Text.Trim() : "";
+            filtro = filtro ?? "";
+
+            _construyendoCatalogo = true;
             flpCatalogoProductos.SuspendLayout();
-            flpCatalogoProductos.Controls.Clear();
-
-            // 1) Intento principal via EF
-            var productos = ProductoCln.listar();
-
-            // 2) Fallback: si no hay productos, intento vía SP y mapeo
-            if (productos == null || productos.Count == 0)
+            try
             {
-                var listaPa = ProductoCln.listarPa("");
-                if (listaPa != null && listaPa.Count > 0)
+                flpCatalogoProductos.Controls.Clear();
+
+                var productos = ProductoCln.listar();
+
+                if (productos == null || productos.Count == 0)
                 {
-                    productos = listaPa
-                        .Select(x => ProductoCln.obtenerUno(x.id))
-                        .Where(x => x != null && x.estado != -1)
-                        .ToList();
+                    var listaPa = ProductoCln.listarPa(filtro);
+                    if (listaPa != null && listaPa.Count > 0)
+                    {
+                        productos = listaPa
+                            .Select(x => ProductoCln.obtenerUno(x.id))
+                            .Where(x => x != null && x.estado != -1)
+                            .ToList();
+                    }
+                }
+
+                if (productos != null)
+                {
+                    if (!(productos.Count > 0 && filtro.Length == 0))
+                    {
+                        productos = productos
+                            .Where(p =>
+                                string.IsNullOrEmpty(filtro) ||
+                                (p.nombre != null && p.nombre.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                                (p.codigo != null && p.codigo.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                                (p.descripcion != null && p.descripcion.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0))
+                            .ToList();
+                    }
+                }
+
+                if (productos != null && productos.Count > 0)
+                {
+                    foreach (var p in productos.OrderBy(p => p.nombre))
+                    {
+                        var card = CrearCardProducto(p);
+                        flpCatalogoProductos.Controls.Add(card);
+
+                        // Restaurar cantidad (dispara ValueChanged pero el flag evita reordenamiento por evento)
+                        var existente = detalles.FirstOrDefault(d => d.idProducto == p.id);
+                        if (existente != null)
+                        {
+                            var nud = card.Controls.OfType<NumericUpDown>().FirstOrDefault();
+                            if (nud != null)
+                            {
+                                int safeCantidad = Math.Min(existente.cantidad, (int)p.saldo);
+                                nud.Value = safeCantidad;
+                            }
+                        }
+                    }
+
+                    // Ahora sí, reordenar todos juntos (los con cantidad > 0 arriba)
+                    ReordenarTodosCardsSegunCantidad();
+                }
+                else
+                {
+                    var lbl = new Label
+                    {
+                        Text = "No hay productos para mostrar.",
+                        AutoSize = false,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Dock = DockStyle.Fill,
+                        ForeColor = Color.DimGray
+                    };
+                    flpCatalogoProductos.Controls.Add(lbl);
                 }
             }
-
-            if (productos != null && productos.Count > 0)
+            finally
             {
-                foreach (var p in productos.OrderBy(p => p.nombre))
-                {
-                    var card = CrearCardProducto(p);
-                    flpCatalogoProductos.Controls.Add(card);
-                }
+                _construyendoCatalogo = false;
+                flpCatalogoProductos.ResumeLayout();
             }
-            else
-            {
-                // Mensaje amigable cuando no hay datos
-                var lbl = new Label
-                {
-                    Text = "No hay productos activos para mostrar.",
-                    AutoSize = false,
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    Dock = DockStyle.Fill,
-                    ForeColor = Color.DimGray
-                };
-                flpCatalogoProductos.Controls.Add(lbl);
-            }
-
-            flpCatalogoProductos.ResumeLayout();
         }
 
         private Control CrearCardProducto(Producto p)
@@ -388,7 +477,6 @@ namespace CpCafeteria
             var producto = ProductoCln.obtenerUno(idProducto);
             if (producto == null) return;
 
-            // Seguridad extra (el Max ya lo impide, pero validamos igual)
             int stock = (int)producto.saldo;
             if (cantidad > stock)
             {
@@ -420,12 +508,72 @@ namespace CpCafeteria
                 else
                 {
                     existente.cantidad = cantidad;
-                    existente.precioUnitario = producto.precioVenta; // por si cambió
+                    existente.precioUnitario = producto.precioVenta;
                     existente.total = cantidad * producto.precioVenta;
                 }
             }
 
             RefrescarDetalle();
+
+            // NUEVO: mover el card (panel) a arriba si cantidad > 0, o al final si vuelve a 0
+            ReordenarCardPorCantidad(nud);
+        }
+
+        // Reemplaza TODO el método ReordenarCardPorCantidad por este
+        private void ReordenarCardPorCantidad(NumericUpDown nud)
+        {
+            if (_construyendoCatalogo) return; // no reordenar mientras se construye/filtra
+            if (flpCatalogoProductos == null || nud == null) return;
+
+            var card = nud.Parent as Control;
+            if (card == null) return;
+
+            // Asegura que el 'card' es realmente hijo del FlowLayoutPanel antes de reordenar
+            if (!ReferenceEquals(card.Parent, flpCatalogoProductos) || !flpCatalogoProductos.Controls.Contains(card))
+                return;
+
+            flpCatalogoProductos.SuspendLayout();
+            try
+            {
+                if (nud.Value > 0)
+                    flpCatalogoProductos.Controls.SetChildIndex(card, 0);
+                else
+                    flpCatalogoProductos.Controls.SetChildIndex(card, flpCatalogoProductos.Controls.Count - 1);
+            }
+            finally
+            {
+                flpCatalogoProductos.ResumeLayout();
+            }
+        }
+
+        // NUEVO: reordenar todos los cards (los que tienen cantidad > 0 arriba)
+        private void ReordenarTodosCardsSegunCantidad()
+        {
+            if (flpCatalogoProductos == null) return;
+
+            // Obtener en el orden actual los que tienen cantidad > 0
+            var seleccionados = flpCatalogoProductos.Controls.Cast<Control>()
+                .Where(c =>
+                {
+                    var nud = c.Controls.OfType<NumericUpDown>().FirstOrDefault();
+                    return nud != null && nud.Value > 0;
+                })
+                .ToList();
+
+            if (seleccionados.Count == 0) return;
+
+            flpCatalogoProductos.SuspendLayout();
+            try
+            {
+                // Movimiento estable: recorremos en reversa y ponemos cada uno en índice 0
+                // Así se mantiene su orden relativo original.
+                foreach (var card in seleccionados.AsEnumerable().Reverse())
+                    flpCatalogoProductos.Controls.SetChildIndex(card, 0);
+            }
+            finally
+            {
+                flpCatalogoProductos.ResumeLayout();
+            }
         }
 
         private void NudCantidad_Leave(object sender, EventArgs e)
@@ -482,6 +630,8 @@ namespace CpCafeteria
             detalles = nuevos;
             RefrescarDetalle();
         }
+
+
 
         private void CargarImagenProducto(Producto p, PictureBox pb)
         {

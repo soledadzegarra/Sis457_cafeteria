@@ -48,6 +48,8 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardarPedido = new System.Windows.Forms.Button();
             this.flpCatalogoProductos = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
+            this.lblBuscarProducto = new System.Windows.Forms.Label();
             this.pnListaProductos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePedido)).BeginInit();
@@ -59,7 +61,7 @@
             this.pnListaProductos.Controls.Add(this.lblPedidos);
             this.pnListaProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnListaProductos.Location = new System.Drawing.Point(0, 0);
-            this.pnListaProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnListaProductos.Margin = new System.Windows.Forms.Padding(4);
             this.pnListaProductos.Name = "pnListaProductos";
             this.pnListaProductos.Size = new System.Drawing.Size(1400, 52);
             this.pnListaProductos.TabIndex = 9;
@@ -81,8 +83,8 @@
             this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFecha.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Enabled = false;
-            this.dtpFecha.Location = new System.Drawing.Point(356, 57);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Location = new System.Drawing.Point(365, 56);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(309, 22);
             this.dtpFecha.TabIndex = 11;
@@ -91,11 +93,11 @@
             // 
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(252, 55);
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(280, 56);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(95, 30);
+            this.lblFecha.Size = new System.Drawing.Size(77, 23);
             this.lblFecha.TabIndex = 10;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -107,10 +109,10 @@
             this.groupBox1.Controls.Add(this.txtCedulaCliente);
             this.groupBox1.Controls.Add(this.lblCedulaIdentidad);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(40, 113);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(13, 98);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(555, 149);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -119,7 +121,7 @@
             // txtNombreCliente
             // 
             this.txtNombreCliente.Location = new System.Drawing.Point(115, 92);
-            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(328, 27);
@@ -143,7 +145,7 @@
             this.btnBuscarCliente.Image = global::CpCafeteria.Properties.Resources.search_23dp_EAC452_FILL0_wght400_GRAD0_opsz24;
             this.btnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarCliente.Location = new System.Drawing.Point(469, 20);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.btnBuscarCliente.Size = new System.Drawing.Size(63, 43);
@@ -155,7 +157,7 @@
             // txtCedulaCliente
             // 
             this.txtCedulaCliente.Location = new System.Drawing.Point(115, 31);
-            this.txtCedulaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedulaCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedulaCliente.Name = "txtCedulaCliente";
             this.txtCedulaCliente.Size = new System.Drawing.Size(328, 27);
             this.txtCedulaCliente.TabIndex = 6;
@@ -177,13 +179,13 @@
             this.dgvDetallePedido.AllowUserToDeleteRows = false;
             this.dgvDetallePedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetallePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetallePedido.Location = new System.Drawing.Point(16, 270);
-            this.dgvDetallePedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDetallePedido.Location = new System.Drawing.Point(599, 60);
+            this.dgvDetallePedido.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetallePedido.Name = "dgvDetallePedido";
             this.dgvDetallePedido.ReadOnly = true;
             this.dgvDetallePedido.RowHeadersWidth = 51;
             this.dgvDetallePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetallePedido.Size = new System.Drawing.Size(629, 154);
+            this.dgvDetallePedido.Size = new System.Drawing.Size(10, 10);
             this.dgvDetallePedido.TabIndex = 13;
             // 
             // txtCambio
@@ -191,7 +193,7 @@
             this.txtCambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCambio.Enabled = false;
             this.txtCambio.Location = new System.Drawing.Point(313, 501);
-            this.txtCambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCambio.Margin = new System.Windows.Forms.Padding(4);
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.ReadOnly = true;
             this.txtCambio.Size = new System.Drawing.Size(133, 22);
@@ -213,7 +215,7 @@
             // 
             this.txtEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEfectivo.Location = new System.Drawing.Point(313, 469);
-            this.txtEfectivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEfectivo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(133, 22);
             this.txtEfectivo.TabIndex = 19;
@@ -236,7 +238,7 @@
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(313, 434);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(133, 22);
@@ -307,13 +309,34 @@
             this.flpCatalogoProductos.Size = new System.Drawing.Size(723, 686);
             this.flpCatalogoProductos.TabIndex = 36;
             // 
+            // txtBuscarProducto
+            // 
+            this.txtBuscarProducto.Location = new System.Drawing.Point(215, 272);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.Size = new System.Drawing.Size(330, 22);
+            this.txtBuscarProducto.TabIndex = 37;
+            // 
+            // lblBuscarProducto
+            // 
+            this.lblBuscarProducto.AutoSize = true;
+            this.lblBuscarProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarProducto.Location = new System.Drawing.Point(21, 272);
+            this.lblBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBuscarProducto.Name = "lblBuscarProducto";
+            this.lblBuscarProducto.Size = new System.Drawing.Size(175, 23);
+            this.lblBuscarProducto.TabIndex = 9;
+            this.lblBuscarProducto.Text = "Buscar Producto:";
+            // 
             // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1400, 738);
-            this.Controls.Add(this.dgvDetallePedido);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.lblBuscarProducto);
+            this.Controls.Add(this.txtBuscarProducto);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.flpCatalogoProductos);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtCambio);
@@ -324,11 +347,10 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnGuardarPedido);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.pnListaProductos);
+            this.Controls.Add(this.dgvDetallePedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPedidos";
             this.Text = "FrmPedidos";
             this.pnListaProductos.ResumeLayout(false);
@@ -363,5 +385,7 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.FlowLayoutPanel flpCatalogoProductos;
+        private System.Windows.Forms.TextBox txtBuscarProducto;
+        private System.Windows.Forms.Label lblBuscarProducto;
     }
 }
