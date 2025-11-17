@@ -502,25 +502,18 @@ namespace CpCafeteria
                 AutoSize = false
             };
 
+            // AJUSTE: ancho completo y traer al frente para que no quede tapado
             var lblPrecio = new Label
             {
+                Name = "lblPrecio",
                 Text = "Precio: " + p.precioVenta.ToString("0.00"),
                 Location = new Point(10, 155),
-                Width = 75,
+                Width = 140,                 // antes 75
+                Height = 18,
                 Font = new Font("Segoe UI", 8),
                 ForeColor = Color.DimGray,
-                AutoSize = false
-            };
-
-            var lblStock = new Label
-            {
-                Text = "Stock: " + p.saldo,
-                Location = new Point(85, 155),
-                Width = 65,
-                Font = new Font("Segoe UI", 8),
-                ForeColor = Color.DimGray,
-                TextAlign = ContentAlignment.TopRight,
-                AutoSize = false
+                AutoSize = false,
+                TextAlign = ContentAlignment.MiddleLeft
             };
 
             int maxCantidad = (int)Math.Max(0, Math.Min((double)p.saldo, int.MaxValue));
@@ -533,17 +526,37 @@ namespace CpCafeteria
                 Location = new Point(10, 180),
                 Font = new Font("Segoe UI", 9),
                 Tag = p.id,
-                ReadOnly = true // Solo flechas/rueda; bloquea tipeo y pegado
+                ReadOnly = true
             };
-
-            // Mantén solo ValueChanged (el Max y esta validación cubren el stock)
             nudCantidad.ValueChanged += NudCantidad_ValueChanged;
+
+            // Stock a la derecha del NumericUpDown
+            var lblStock = new Label
+            {
+                Text = "Stock: " + p.saldo,
+                AutoSize = true,
+                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.DimGray
+            };
+            int spacing = 8;
+            lblStock.Location = new Point(nudCantidad.Left + nudCantidad.Width + spacing, nudCantidad.Top + 3);
+
+            if (lblStock.Location.X + lblStock.PreferredWidth > panel.Width - 10)
+            {
+                lblStock.AutoSize = false;
+                lblStock.Width = Math.Max(0, panel.Width - 10 - lblStock.Location.X);
+                lblStock.Height = nudCantidad.Height;
+                lblStock.TextAlign = ContentAlignment.MiddleLeft;
+            }
 
             panel.Controls.Add(pb);
             panel.Controls.Add(lblNombre);
             panel.Controls.Add(lblPrecio);
-            panel.Controls.Add(lblStock);
             panel.Controls.Add(nudCantidad);
+            panel.Controls.Add(lblStock);
+
+            // Garantiza que el precio quede visible encima de otros controles
+            lblPrecio.BringToFront();
 
             return panel;
         }
