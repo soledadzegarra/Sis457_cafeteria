@@ -22,3 +22,15 @@ G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CadC
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafet.0D72459C.Up2Date
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafeteria.dll
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafeteria.pdb
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\CadCafeteria.dll.config
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\CadCafeteria.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\CadCafeteria.pdb
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\EntityFramework.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\EntityFramework.xml
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafeteria.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafeteria.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafet.0D72459C.Up2Date
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafeteria.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CadCafeteria\obj\Debug\CadCafeteria.pdb

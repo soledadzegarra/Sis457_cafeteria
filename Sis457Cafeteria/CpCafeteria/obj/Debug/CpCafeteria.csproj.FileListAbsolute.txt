@@ -60,3 +60,35 @@ G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCa
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe.config
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmAgregarClienteRapido.resources
 G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmDetallePedido.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\CpCafeteria.exe.config
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\CpCafeteria.exe
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\CpCafeteria.pdb
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\CadCafeteria.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\ClnCafeteria.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\EntityFramework.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\CadCafeteria.pdb
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\CadCafeteria.dll.config
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\ClnCafeteria.pdb
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\ClnCafeteria.dll.config
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\EntityFramework.xml
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe.config
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmAgregarClienteRapido.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmAutenticacion.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmCategoria.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmClientes.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmDetallePedido.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmEmpleado.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmListaPedidos.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmPedidos.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmPrincipal.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmProductos.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmSeleccionarProducto.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.Properties.Resources.resources
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafete.C6C32759.Up2Date
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe
+C:\Users\Hp\Desktop\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.pdb

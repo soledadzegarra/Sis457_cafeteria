@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="006af604e764496ebe76cc33201ddc3d" Name="Diagram1">
-        <EntityTypeShape EntityType="LabCafeteriaModel.Categoria" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+      <Diagram DiagramId="006af604e764496ebe76cc33201ddc3d" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="LabCafeteriaModel.Categoria" Width="1.5" PointX="10.5" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="LabCafeteriaModel.Cliente" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="LabCafeteriaModel.DetallePedido" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LabCafeteriaModel.Empleado" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="LabCafeteriaModel.Pedido" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabCafeteriaModel.Producto" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabCafeteriaModel.Producto" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="LabCafeteriaModel.Usuario" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="LabCafeteriaModel.FK_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="LabCafeteriaModel.fk_Venta_Cliente" ManuallyRouted="false" />
