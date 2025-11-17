@@ -17,10 +17,26 @@ namespace CpCafeteria
         private bool modoEdicion = false;
         private System.Threading.Timer searchTimer;
         private const int SEARCH_DELAY = 500;
+
+        // NUEVO: modo diálogo y retorno del cliente creado
+        private bool modoDialogoAgregar = false;
+        public Cliente ClienteCreado { get; private set; }
+
         public FrmClientes()
         {
             InitializeComponent();
         }
+
+        // NUEVO: preparar el formulario para usarse como diálogo de "Agregar"
+        public void PrepararModoAgregarDialogo()
+        {
+            modoDialogoAgregar = true;
+            modoEdicion = false;
+            limpiar();
+            mostrarPanelAgregar();
+            txtCedulaIdentidad.Focus();
+        }
+
         private void listar()
         {
             var lista = ClientesCln.listarPa(txtBuscar.Text.Trim());
@@ -149,13 +165,28 @@ namespace CpCafeteria
                 {
                     cliente.fechaRegistro = DateTime.Now;
                     cliente.estado = 1;
-                    ClientesCln.insertar(cliente);
+                    // IMPORTANTE: guardar y recuperar el id
+                    cliente.id = ClientesCln.insertar(cliente);
+
+                    if (modoDialogoAgregar)
+                    {
+                        ClienteCreado = cliente;
+                        DialogResult = DialogResult.OK; // cierra el diálogo
+                        return;
+                    }
                 }
                 else
                 {
                     int index = dgvClientes.CurrentCell.RowIndex;
                     cliente.id = Convert.ToInt32(dgvClientes.Rows[index].Cells["id"].Value);
                     ClientesCln.actualizar(cliente);
+
+                    if (modoDialogoAgregar)
+                    {
+                        ClienteCreado = ClientesCln.obtenerUno(cliente.id);
+                        DialogResult = DialogResult.OK;
+                        return;
+                    }
                 }
                 listar();
                 btnCancelar.PerformClick();
@@ -195,11 +226,21 @@ namespace CpCafeteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            if (modoDialogoAgregar)
+            {
+                DialogResult = DialogResult.Cancel;
+                return;
+            }
             ocultarPanelAgregar();
         }
 
         private void btnCerrarAgregar_Click(object sender, EventArgs e)
         {
+            if (modoDialogoAgregar)
+            {
+                DialogResult = DialogResult.Cancel;
+                return;
+            }
             ocultarPanelAgregar();
         }
     }

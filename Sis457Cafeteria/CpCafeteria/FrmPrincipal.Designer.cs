@@ -144,7 +144,7 @@
             this.pctCafeteriaLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctCafeteriaLogo.Image = global::CpCafeteria.Properties.Resources.book__1_;
             this.pctCafeteriaLogo.Location = new System.Drawing.Point(505, 3);
-            this.pctCafeteriaLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pctCafeteriaLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pctCafeteriaLogo.Name = "pctCafeteriaLogo";
             this.pctCafeteriaLogo.Size = new System.Drawing.Size(80, 62);
             this.pctCafeteriaLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -291,10 +291,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CpCafeteria.Properties.Resources.logoCafe2_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(269, 185);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(604, 416);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -313,7 +315,7 @@
             this.ClientSize = new System.Drawing.Size(1050, 750);
             this.Controls.Add(this.pnContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";

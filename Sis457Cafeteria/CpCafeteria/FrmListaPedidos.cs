@@ -35,6 +35,7 @@ namespace CpCafeteria
         {
             listar();
             txtBuscar.TextChanged += txtBuscar_TextChanged;
+ 
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -55,6 +56,36 @@ namespace CpCafeteria
         private void FrmListaPedidos_FormClosing(object sender, FormClosingEventArgs e)
         {
             searchTimer?.Dispose();
+        }
+
+
+        // NUEVO: abrir detalle
+        private int? GetIdPedidoSeleccionado()
+        {
+            if (dgvPedidos.CurrentRow == null) return null;
+            var cell = dgvPedidos.CurrentRow.Cells["id"];
+            if (cell == null || cell.Value == null) return null;
+            return Convert.ToInt32(cell.Value);
+        }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            var id = GetIdPedidoSeleccionado();
+            if (id == null)
+            {
+                MessageBox.Show("Seleccione un pedido.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            using (var frm = new FrmDetallePedido(id.Value))
+            {
+                frm.ShowDialog(this);
+            }
+        }
+
+        private void dgvPedidos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) btnVerDetalle_Click(sender, EventArgs.Empty);
         }
     }
 }

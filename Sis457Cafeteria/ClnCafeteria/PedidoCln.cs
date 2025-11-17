@@ -33,5 +33,14 @@ namespace ClnCafeteria
                 return context.paPedidoListar(parametro).ToList();
             }
         }
+
+        // NUEVO: obtener cabecera del pedido por id
+        public static Pedido obtenerUno(int id)
+        {
+            using (var context = new LabCafeteriaEntities())
+            {
+                return context.Pedido.Find(id);
+            }
+        }
     }
 }

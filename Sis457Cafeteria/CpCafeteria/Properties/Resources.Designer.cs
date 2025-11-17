@@ -183,6 +183,16 @@ namespace CpCafeteria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap frame_inspect_35dp_000000_FILL0_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("frame_inspect_35dp_000000_FILL0_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_3o8z2u3o8z2u3o8z {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_3o8z2u3o8z2u3o8z", resourceCulture);

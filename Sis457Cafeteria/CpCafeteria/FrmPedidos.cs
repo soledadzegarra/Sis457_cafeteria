@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using CadCafeteria;
 using ClnCafeteria;
 using System.ComponentModel;
+using System.Text;
 
 namespace CpCafeteria
 {
@@ -41,6 +42,47 @@ namespace CpCafeteria
                 txtBuscarProducto.TextChanged += txtBuscarProducto_TextChanged;
 
             ConstruirCatalogoProductos(); // Carga el catálogo visual
+        }
+
+        private string Trunc(string txt, int len)
+        {
+            if (string.IsNullOrEmpty(txt)) return "";
+            if (txt.Length <= len) return txt;
+            return txt.Substring(0, len - 1) + "…";
+        }
+
+        private bool ConfirmarResumenPedido()
+        {
+            // Asegurar sincronización por si hubo cambios en catálogo
+            SincronizarDetallesDesdeCatalogo();
+
+            decimal total = detalles.Sum(d => d.total);
+            decimal efectivo = 0;
+            decimal.TryParse(txtEfectivo.Text, out efectivo);
+
+            var sb = new StringBuilder();
+            sb.AppendLine("Cliente: " + clienteSeleccionado.nombres + " " +
+                          clienteSeleccionado.apellidos + " (" + clienteSeleccionado.cedulaIdentidad + ")");
+            sb.AppendLine("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
+            sb.AppendLine();
+            sb.AppendLine("Detalle:");
+            sb.AppendLine("Cant  Producto                    P.Unit   Importe");
+            foreach (var d in detalles)
+            {
+                var prod = d.Producto ?? ProductoCln.obtenerUno(d.idProducto);
+                string nombre = prod != null ? prod.nombre : "(?)";
+                sb.AppendLine($"{d.cantidad,4}  {Trunc(nombre, 25),-25} {d.precioUnitario,7:0.00} {d.total,8:0.00}");
+            }
+            sb.AppendLine("-----------------------------------------------");
+            sb.AppendLine($"TOTAL:    {total:0.00}");
+            sb.AppendLine($"EFECTIVO: {efectivo:0.00}");
+            sb.AppendLine($"CAMBIO:   {(efectivo - total):0.00}");
+            sb.AppendLine();
+            sb.AppendLine("¿Confirmar y guardar el pedido?");
+
+            var dr = MessageBox.Show(sb.ToString(), "Confirmar Pedido",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return dr == DialogResult.Yes;
         }
 
         // 3. Agrega el manejador con retraso (debounce) para evitar reconstruir en cada pulsación:
@@ -123,14 +165,77 @@ namespace CpCafeteria
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            string cedula = txtCedulaCliente.Text.Trim();
-            clienteSeleccionado = ClientesCln.listar().FirstOrDefault(c => c.cedulaIdentidad == cedula);
-            if (clienteSeleccionado != null)
-                txtNombreCliente.Text = clienteSeleccionado.nombres + " " + clienteSeleccionado.apellidos;
-            else
+            string criterio = txtCedulaCliente.Text.Trim();
+            if (string.IsNullOrWhiteSpace(criterio))
+            {
+                MessageBox.Show("Ingrese CI, nombre o apellido para buscar.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreCliente.Clear();
+                clienteSeleccionado = null;
+                return;
+            }
+
+            var coincidencias = ClientesCln.listarPa(criterio);
+
+            if (coincidencias == null || coincidencias.Count == 0)
             {
                 txtNombreCliente.Clear();
-                MessageBox.Show("Cliente no encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                clienteSeleccionado = null;
+                MessageBox.Show("Cliente no encontrado.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Coincidencia exacta de CI
+            var exactaCedula = coincidencias
+                .FirstOrDefault(c => !string.IsNullOrEmpty(c.cedulaIdentidad) &&
+                                     c.cedulaIdentidad.Equals(criterio, StringComparison.OrdinalIgnoreCase));
+
+            var seleccionado = exactaCedula ?? coincidencias.First();
+
+            // Mapear resultado del procedimiento a entidad Cliente (sin otro acceso a BD)
+            clienteSeleccionado = new Cliente
+            {
+                id = seleccionado.id,
+                cedulaIdentidad = seleccionado.cedulaIdentidad,
+                nombres = seleccionado.nombres,
+                apellidos = seleccionado.apellidos,
+                usuarioRegistro = seleccionado.usuarioRegistro,
+                fechaRegistro = seleccionado.fechaRegistro,
+                estado = seleccionado.estado
+            };
+
+            txtNombreCliente.Text = clienteSeleccionado.nombres + " " + clienteSeleccionado.apellidos;
+
+            if (exactaCedula == null && coincidencias.Count > 1)
+            {
+                MessageBox.Show($"Se encontraron {coincidencias.Count} coincidencias. Se seleccionó la primera. Refine la búsqueda si necesita otro cliente.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        // Manejador: dispara la búsqueda al presionar Enter en txtCedulaCliente
+        private void txtCedulaCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // evita el beep y el salto de línea
+                btnBuscarCliente.PerformClick();
+            }
+        }
+
+        // Botón para crear un nuevo cliente desde el pedido
+        private void btnAgregarCliente_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmAgregarClienteRapido())
+            {
+                var dr = frm.ShowDialog(this);
+                if (dr == DialogResult.OK && frm.ClienteCreado != null)
+                {
+                    clienteSeleccionado = frm.ClienteCreado;
+                    txtCedulaCliente.Text = clienteSeleccionado.cedulaIdentidad;
+                    txtNombreCliente.Text = clienteSeleccionado.nombres + " " + clienteSeleccionado.apellidos;
+                }
             }
         }
 
@@ -196,10 +301,7 @@ namespace CpCafeteria
 
         private void btnGuardarPedido_Click(object sender, EventArgs e)
         {
-            // Forzar validación de todos los NumericUpDown (dispara Validating)
             if (!ValidateChildren()) return;
-
-            // Asegurar que 'detalles' refleje lo escrito en los NumericUpDown
             SincronizarDetallesDesdeCatalogo();
 
             if (clienteSeleccionado == null)
@@ -212,6 +314,7 @@ namespace CpCafeteria
                 MessageBox.Show("Debe agregar al menos un producto.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             decimal total = detalles.Sum(d => d.total);
             decimal efectivo = 0;
             decimal.TryParse(txtEfectivo.Text, out efectivo);
@@ -221,6 +324,11 @@ namespace CpCafeteria
                 return;
             }
 
+            // Mostrar resumen y confirmar
+            if (!ConfirmarResumenPedido())
+                return;
+
+            // Persistencia real
             var pedido = new Pedido
             {
                 idCliente = clienteSeleccionado.id,
@@ -244,7 +352,8 @@ namespace CpCafeteria
                 ProductoCln.actualizar(producto);
             }
 
-            MessageBox.Show("Venta registrada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Venta registrada correctamente", "Mensaje",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarFormulario();
             ConstruirCatalogoProductos();
         }

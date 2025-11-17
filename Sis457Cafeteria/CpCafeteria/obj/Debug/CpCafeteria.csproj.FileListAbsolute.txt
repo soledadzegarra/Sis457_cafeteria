@@ -58,3 +58,5 @@ G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCa
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmSeleccionarProducto.resources
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafete.C6C32759.Up2Date
 G:\PROGRAMACION\MARLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.exe.config
+G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmAgregarClienteRapido.resources
+G:\PROGRAMACION\SOLE LAB\SIS457 CAFETERIA\Sis457_cafeteria\Sis457Cafeteria\CpCafeteria\obj\Debug\CpCafeteria.FrmDetallePedido.resources

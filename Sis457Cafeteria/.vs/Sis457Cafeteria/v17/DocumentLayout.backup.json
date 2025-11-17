@@ -1,25 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
+  "WorkspaceRootPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmdetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmdetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAC8AF87-7E54-4E01-9C47-05753577FF79}|ClnCafeteria\\ClnCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\clncafeteria\\pedidocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAC8AF87-7E54-4E01-9C47-05753577FF79}|ClnCafeteria\\ClnCafeteria.csproj|solutionrelative:clncafeteria\\pedidocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmdetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmdetallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmlistapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmlistapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmlistapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmlistapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmcategoriacs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmcategoriacs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\marle lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmagregarclienterapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmagregarclienterapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\cpcafeteria\\frmagregarclienterapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmagregarclienterapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\cpcafeteria\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{827ACF53-0AD1-4186-B61C-9EAEC114211B}|CpCafeteria\\CpCafeteria.csproj|solutionrelative:cpcafeteria\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,24 +78,136 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmProductos.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs",
-              "RelativeDocumentMoniker": "CpCafeteria\\FrmProductos.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs",
-              "RelativeToolTip": "CpCafeteria\\FrmProductos.cs",
-              "ViewState": "AgIAAKQBAAAAAAAAAAAiwLwBAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FrmListaPedidos.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmListaPedidos.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmListaPedidos.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmListaPedidos.cs",
+              "RelativeToolTip": "CpCafeteria\\FrmListaPedidos.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwCUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T22:20:27.831Z",
+              "WhenOpened": "2025-11-17T02:41:03.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "FrmListaPedidos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmListaPedidos.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmListaPedidos.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmListaPedidos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpCafeteria\\FrmListaPedidos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:00:11.727Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmDetallePedido.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmDetallePedido.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmDetallePedido.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmDetallePedido.cs*",
+              "RelativeToolTip": "CpCafeteria\\FrmDetallePedido.cs*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwDkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:40:49.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidoCln.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\ClnCafeteria\\PedidoCln.cs",
+              "RelativeDocumentMoniker": "ClnCafeteria\\PedidoCln.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\ClnCafeteria\\PedidoCln.cs",
+              "RelativeToolTip": "ClnCafeteria\\PedidoCln.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:40:18.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmDetallePedido.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmDetallePedido.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmDetallePedido.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmDetallePedido.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "CpCafeteria\\FrmDetallePedido.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:28:34.452Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmCategoriacs.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmCategoriacs.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmCategoriacs.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmCategoriacs.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpCafeteria\\FrmCategoriacs.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:34:40.87Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmPedidos.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmPedidos.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs",
+              "RelativeToolTip": "CpCafeteria\\FrmPedidos.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAAAC4BAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:33:47.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmPrincipal.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpCafeteria\\FrmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T22:10:23.768Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmPedidos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmPedidos.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpCafeteria\\FrmPedidos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T20:44:16.738Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmAgregarClienteRapido.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAgregarClienteRapido.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmAgregarClienteRapido.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAgregarClienteRapido.cs",
+              "RelativeToolTip": "CpCafeteria\\FrmAgregarClienteRapido.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwBgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:29:47.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "FrmProductos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs",
               "RelativeDocumentMoniker": "CpCafeteria\\FrmProductos.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs [Dise\u00F1o]",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpCafeteria\\FrmProductos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T22:02:24.006Z",
@@ -63,40 +215,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmPedidos.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs",
-              "RelativeDocumentMoniker": "CpCafeteria\\FrmPedidos.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs*",
-              "RelativeToolTip": "CpCafeteria\\FrmPedidos.cs*",
-              "ViewState": "AgIAAFEBAAAAAAAAAAAiwFgBAAAUAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "FrmAgregarClienteRapido.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAgregarClienteRapido.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmAgregarClienteRapido.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmAgregarClienteRapido.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpCafeteria\\FrmAgregarClienteRapido.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:33:47.873Z",
+              "WhenOpened": "2025-11-17T01:29:32.721Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FrmClientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmClientes.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmClientes.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmClientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpCafeteria\\FrmClientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:41:46.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FrmClientes.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmClientes.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmClientes.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmClientes.cs",
+              "RelativeToolTip": "CpCafeteria\\FrmClientes.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAwOsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:10:39.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FrmProductos.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs",
+              "RelativeDocumentMoniker": "CpCafeteria\\FrmProductos.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmProductos.cs",
+              "RelativeToolTip": "CpCafeteria\\FrmProductos.cs",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAiwLwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T22:20:27.831Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmPedidos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs",
-              "RelativeDocumentMoniker": "CpCafeteria\\FrmPedidos.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPedidos.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "CpCafeteria\\FrmPedidos.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T20:44:16.738Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "CpCafeteria\\FrmPrincipal.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\CpCafeteria\\FrmPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpCafeteria\\FrmPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T22:10:23.768Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
