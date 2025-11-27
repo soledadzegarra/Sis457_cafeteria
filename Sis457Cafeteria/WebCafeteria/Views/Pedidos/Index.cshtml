@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebCafeteria.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Pedidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="dark-background min-vh-100 py-4" style="background: #9C5D3B; font-family: var(--nav-font); color: var(--nav-color);">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="mb-0" style="color: var(--nav-hover-color); font-family: var(--nav-font);">
+                <i class="bi bi-receipt me-2" style="color: var(--accent-color);"></i> Pedidos
+            </h1>
+            <a asp-action="Create" class="btn btn-animado"
+               style="background: #198754; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;">
+                <i class="bi bi-plus-circle me-1"></i> Nuevo Pedido
+            </a>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <input type="text" id="buscadorPedidos" class="form-control" placeholder="Buscar por cliente, usuario o fecha..." />
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle" style="background: #fffbe9; border-radius: 16px;">
+                <thead>
+                    <tr style="background: #ffefd5; color: #b8860b;">
+                        <th style="background: #ffefd5">N° Pedido</th>
+                        <th style="background: #ffefd5">Cliente</th>
+                        <th style="background: #ffefd5">Usuario</th>
+                        <th style="background: #ffefd5">Fecha</th>
+                        <th style="background: #ffefd5">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="background: #ffefd5">@item.NumeroTransaccion</td>
+                            <td style="background: #ffefd5">@item.IdClienteNavigation?.Nombres @item.IdClienteNavigation?.Apellidos</td>
+                            <td style="background: #ffefd5">@item.IdUsuarioNavigation?.Usuario1</td>
+                            <td style="background: #ffefd5">@item.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+
+                            <td style="background: #ffefd5">
+                                <a asp-action="Details" asp-route-id="@item.Id"
+                                   class="btn btn-animado btn-sm"
+                                   style="background: #cd853f; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;"
+                                   title="Ver detalles">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id"
+                                   class="btn btn-animado btn-sm"
+                                   style="background: #ff6347; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;"
+                                   title="Eliminar">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#buscadorPedidos').on('keyup', function () {
+                var filtro = $(this).val().toLowerCase();
+                $('table tbody tr').each(function () {
+                    var texto = $(this).text().toLowerCase();
+                    $(this).toggle(texto.indexOf(filtro) > -1);
+                });
+            });
+        });
+    </script>
+}

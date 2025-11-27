@@ -1,0 +1,365 @@
+﻿@model WebCafeteria.Models.Pedido
+
+@{
+    ViewData["Title"] = "Nuevo Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="dark-background min-vh-100 py-4" style="background: #9C5D3B; font-family: var(--nav-font); color: var(--nav-color);">
+    <div class="container">
+        @if (ViewBag.Mensaje != null)
+        {
+            <div id="toast-mensaje" class="toast-mensaje position-fixed">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                @ViewBag.Mensaje
+            </div>
+        }
+        <h1 class="mb-4" style="color: var(--nav-hover-color); font-family: var(--nav-font);">
+            <i class="bi bi-receipt me-2" style="color: var(--accent-color);"></i> Nuevo Pedido
+        </h1>
+        <div class="card shadow-lg" style="border-radius: 24px; background: #ffefd5;">
+            <div class="card-body p-4">
+                <form id="formPedido" asp-action="Create" method="post" autocomplete="off">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-5">
+                            <label class="form-label fw-semibold"><i class="bi bi-person"></i> Cliente</label>
+                            <input type="text" id="buscarCliente" class="form-control mb-2" placeholder="Buscar cliente por nombre o CI..." autocomplete="off" />
+                            <div class="input-group">
+                                <select id="IdCliente" name="IdCliente" class="form-select" required>
+                                    <option value="">Seleccione un cliente</option>
+                                    @foreach (var cliente in (IEnumerable<WebCafeteria.Models.Cliente>)ViewBag.Clientes)
+                                    {
+                                        <option value="@cliente.Id">@cliente.Nombres @cliente.Apellidos (@cliente.CedulaIdentidad)</option>
+                                    }
+                                </select>
+                                <button type="button" class="btn btn-primary" id="btnNuevoCliente" title="Agregar nuevo cliente">
+                                    <i class="bi bi-person-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold"><i class="bi bi-calendar-event"></i> Fecha</label>
+                            <input type="text" class="form-control" value="@DateTime.Now.ToString("dd/MM/yyyy HH:mm")" readonly />
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <h5 class="mb-3" style="color: #08902c;"><i class="bi bi-basket2"></i> Agregar Productos</h5>
+                    <div class="row g-3 align-items-end mb-3">
+                        <div class="col-md-5">
+                            <label class="form-label fw-semibold"><i class="bi bi-box-seam"></i> Producto</label>
+                            <select id="producto" class="form-select">
+                                <option value="">Seleccione un producto</option>
+                                @foreach (var prod in (IEnumerable<WebCafeteria.Models.Producto>)ViewBag.Productos)
+                                {
+                                    <option value="@prod.Id" data-precio="@prod.PrecioVenta">
+                                        @prod.Nombre (Stock: @prod.Saldo)
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label fw-semibold"><i class="bi bi-sort-numeric-up"></i> Cantidad</label>
+                            <input type="number" id="cantidad" class="form-control" min="1" value="1" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label fw-semibold"><i class="bi bi-currency-dollar"></i> Precio</label>
+                            <input type="number" id="precio" class="form-control" min="0" step="0.01" readonly />
+                        </div>
+                        <div class="col-md-2 d-grid">
+                            <button type="button" id="btnAgregarDetalle" class="btn btn-success btn-animado" style="border-radius: 50px;">
+                                <i class="bi bi-plus-circle"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered align-middle" id="tablaDetalle" style="background: #fffbe9; border-radius: 16px;">
+                            <thead>
+                                <tr style="background: #ffefd5; color: #b8860b;">
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Total</th>
+                                    <th>Quitar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- detalles -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-3">
+                            <label class="form-label fw-semibold"><i class="bi bi-wallet2"></i> Efectivo</label>
+                            <input type="number" id="efectivo" class="form-control" min="0" step="0.01" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label fw-semibold"><i class="bi bi-cash-stack"></i> Total</label>
+                            <input type="text" id="total" name="Total" class="form-control" readonly />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label fw-semibold"><i class="bi bi-arrow-repeat"></i> Cambio</label>
+                            <input type="text" id="cambio" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <input type="hidden" id="detalleJson" name="DetalleJson" />
+                    <div class="d-flex justify-content-end gap-2 mt-4">
+                        <button type="submit" class="btn btn-animado" style="background: #198754; color: var(--nav-hover-color); border-radius: 50px;">
+                            <i class="bi bi-save me-1"></i> Guardar Pedido
+                        </button>
+                        <a asp-action="Index" class="btn btn-animado" style="background: #b8860b; color: var(--nav-hover-color); border-radius: 50px;">
+                            <i class="bi bi-x-circle me-1"></i> Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal para agregar cliente -->
+<div class="modal fade" id="modalAgregarCliente" tabindex="-1" aria-labelledby="modalAgregarClienteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: #ffefd5; border-radius: 24px;">
+            <form id="formAgregarCliente">
+                <div class="modal-header" style="background: #9C5D3B;">
+                    <h5 class="modal-title" id="modalAgregarClienteLabel" style="color: var(--nav-hover-color);">
+                        <i class="bi bi-person-plus me-2"></i> Nuevo Cliente
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="ciCliente" class="form-label">Cédula de Identidad</label>
+                        <input type="number" class="form-control" id="ciCliente" name="CedulaIdentidad" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombresCliente" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombresCliente" name="Nombres" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidosCliente" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidosCliente" name="Apellidos" required />
+                    </div>
+                </div>
+                <div class="modal-footer" style="background: #ffefd5;">
+                    <button type="button" class="btn btn-animado" data-bs-dismiss="modal" style="background: #b8860b;">Cancelar</button>
+                    <button type="submit" class="btn btn-animado" style="background: #ff9e03;">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let detalles = [];
+        // guardar el stock de cada producto
+        let stockProductos = {};
+
+        // iniciar stockProductos al cargar la página
+        $(document).ready(function () {
+            $('#producto option').each(function () {
+                const id = $(this).val();
+                const texto = $(this).text();
+
+                const match = texto.match(/\(Stock:\s*(\d+)\)/);
+                if (id && match) {
+                    stockProductos[id] = parseInt(match[1]);
+                }
+            });
+        });
+
+        // seleccionar al producto ymostrar el precio
+        $('#producto').on('change', function () {
+            const precio = $('option:selected', this).data('precio') || 0;
+            $('#precio').val(precio);
+            // Limita cantidad maxima al stock
+            const idProducto = $(this).val();
+            if (idProducto && stockProductos[idProducto] !== undefined) {
+                $('#cantidad').attr('max', stockProductos[idProducto]);
+            } else {
+                $('#cantidad').removeAttr('max');
+            }
+        });
+
+        // aggregar producto al detalle
+        $('#btnAgregarDetalle').on('click', function (e) {
+            e.preventDefault();
+            const idProducto = $('#producto').val();
+            const nombreProducto = $('#producto option:selected').text();
+            const precio = parseFloat($('#precio').val());
+            const cantidad = parseInt($('#cantidad').val());
+
+            if (!idProducto || isNaN(precio) || isNaN(cantidad) || cantidad < 1) {
+                alert('Seleccione un producto y cantidad válida.');
+                return;
+            }
+            if (cantidad > stockProductos[idProducto]) {
+                alert('No hay suficiente stock disponible.');
+                return;
+            }
+
+            // verificar si ya existe el producto en el detalle
+            const existente = detalles.find(d => d.idProducto == idProducto);
+            if (existente) {
+                if (existente.cantidad + cantidad > stockProductos[idProducto]) {
+                    alert('No hay suficiente stock disponible.');
+                    return;
+                }
+                existente.cantidad += cantidad;
+                existente.total = existente.cantidad * existente.precioUnitario;
+            } else {
+                detalles.push({
+                    idProducto: idProducto,
+                    nombreProducto: nombreProducto,
+                    cantidad: cantidad,
+                    precioUnitario: precio,
+                    total: cantidad * precio
+                });
+            }
+
+            // disminuye el saldo/stock
+            stockProductos[idProducto] -= cantidad;
+
+            // si el stock llega a 0  quitar el producto
+            if (stockProductos[idProducto] <= 0) {
+                $('#producto option[value="' + idProducto + '"]').remove();
+            } else {
+                // actualiza el texto del producto
+                $('#producto option[value="' + idProducto + '"]').text(
+                    nombreProducto.replace(/\(Stock:\s*\d+\)/, '(Stock: ' + stockProductos[idProducto] + ')')
+                );
+            }
+
+            renderDetalle();
+            limpiarProducto();
+        });
+
+        // quita el producto del detalle
+        $('#tablaDetalle').on('click', '.btn-quitar', function () {
+            const idProducto = $(this).data('id');
+            const detalle = detalles.find(d => d.idProducto == idProducto);
+            if (detalle) {
+                // devuelve el stock al combo
+                if (stockProductos[idProducto] !== undefined) {
+                    stockProductos[idProducto] += detalle.cantidad;
+                    // si no existe la vuelve a agregar
+                    if ($('#producto option[value="' + idProducto + '"]').length === 0) {
+                        $('#producto').append(
+                            `<option value="${idProducto}" data-precio="${detalle.precioUnitario}">${detalle.nombreProducto.replace(/\(Stock:\s*\d+\)/, '(Stock: ' + stockProductos[idProducto] + ')')}</option>`
+                        );
+                    } else {
+                        $('#producto option[value="' + idProducto + '"]').text(
+                            detalle.nombreProducto.replace(/\(Stock:\s*\d+\)/, '(Stock: ' + stockProductos[idProducto] + ')')
+                        );
+                    }
+                }
+            }
+            detalles = detalles.filter(d => d.idProducto != idProducto);
+            renderDetalle();
+        });
+
+        // calcular cambio al escribir efectivo
+        $('#efectivo').on('input', function () {
+            calcularCambio();
+        });
+
+        //  tabla de detalle y calcular total
+        function renderDetalle() {
+            let html = '';
+            let total = 0;
+            detalles.forEach(d => {
+                html += `<tr>
+                    <td>${d.nombreProducto}</td>
+                    <td>${d.cantidad}</td>
+                    <td>${d.precioUnitario.toFixed(2)}</td>
+                    <td>${d.total.toFixed(2)}</td>
+                    <td><button type="button" class="btn btn-danger btn-sm btn-quitar" data-id="${d.idProducto}"><i class="bi bi-trash"></i></button></td>
+                </tr>`;
+                total += d.total;
+            });
+            $('#tablaDetalle tbody').html(html);
+            $('#total').val(total.toFixed(2));
+            calcularCambio();
+            $('#detalleJson').val(JSON.stringify(detalles));
+        }
+
+        // cambio
+        function calcularCambio() {
+            const total = parseFloat($('#total').val()) || 0;
+            const efectivo = parseFloat($('#efectivo').val()) || 0;
+            const cambio = efectivo - total;
+            $('#cambio').val(cambio >= 0 ? cambio.toFixed(2) : '0.00');
+        }
+
+        // limpia producto
+        function limpiarProducto() {
+            $('#producto').val('');
+            $('#precio').val('');
+            $('#cantidad').val(1);
+        }
+
+        // validar
+        $('#formPedido').on('submit', function () {
+            if (detalles.length === 0) {
+                alert('Debe agregar al menos un producto al pedido.');
+                return false;
+            }
+            if ($('#efectivo').val() === '' || parseFloat($('#efectivo').val()) < parseFloat($('#total').val())) {
+                alert('El efectivo no puede ser menor al total.');
+                return false;
+            }
+            $('#detalleJson').val(JSON.stringify(detalles));
+            return true;
+        });
+
+        // (abre el modal)
+        $('#btnNuevoCliente').on('click', function () {
+            $('#modalAgregarCliente').modal('show');
+        });
+
+        // guardar cliente
+        $('#formAgregarCliente').submit(function (e) {
+            e.preventDefault();
+            var datos = {
+                CedulaIdentidad: $('#ciCliente').val(),
+                Nombres: $('#nombresCliente').val(),
+                Apellidos: $('#apellidosCliente').val()
+            };
+            $.post('@Url.Action("CreateQuick", "Clientes")', datos, function (result) {
+                if (result.success) {
+                    // agrega el nuevo cliente al combo y selecciona
+                    $('#IdCliente').append(
+                        `<option value="${result.id}">${result.nombres} ${result.apellidos} (${result.ci})</option>`
+                    );
+                    $('#IdCliente').val(result.id);
+                    $('#modalAgregarCliente').modal('hide');
+                    alert('Cliente agregado correctamente.');
+                } else {
+                    alert(result.mensaje || 'Error al agregar cliente.');
+                }
+            });
+        });
+
+        //mensaje tiempo
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#toast-mensaje').fadeOut();
+            }, 3000);
+        });
+
+        // Filtro de clientes en el select
+        $('#buscarCliente').on('keyup', function () {
+            var filtro = $(this).val().toLowerCase();
+            $('#IdCliente option').each(function () {
+                if ($(this).val() === "") return; // No ocultar el placeholder
+                var texto = $(this).text().toLowerCase();
+                $(this).toggle(texto.indexOf(filtro) > -1);
+            });
+            // Si no hay coincidencias, selecciona el placeholder
+            if ($('#IdCliente option:visible').length === 1) {
+                $('#IdCliente').val('');
+            }
+        });
+
+    </script>
+}

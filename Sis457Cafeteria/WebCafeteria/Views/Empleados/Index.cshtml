@@ -1,0 +1,101 @@
+﻿@model IEnumerable<WebCafeteria.Models.Empleado>
+@{
+    ViewData["Title"] = "Empleados";
+}
+<div class="dark-background min-vh-100 py-4" style="background: #9C5D3B; font-family: var(--nav-font); color: var(--nav-color);">
+    <div class="container">
+        @if (TempData["Mensaje"] != null)
+        {
+            <div id="toast-mensaje" class="toast-mensaje position-fixed">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                @TempData["Mensaje"]
+            </div>
+        }
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="mb-0" style="color: var(--nav-hover-color); font-family: var(--nav-font);">
+                <i class="bi bi-person-badge me-2" style="color: var(--accent-color);"></i> Empleados
+            </h1>
+            <a asp-action="Create" class="btn btn-animado" style="background: #ff9e03; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;">
+                <i class="bi bi-plus-circle me-1"></i> Nuevo Empleado
+            </a>
+        </div>
+        <div class="mb-3 mt-3">
+            <input type="text" id="buscadorEmpleados" class="form-control" placeholder="Buscar por CI, nombre o cargo..." />
+        </div>
+        <div class="table-responsive rounded-3 shadow-sm">
+            <table class="table table-hover align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="background-color : #ffefd5">Cédula</th>
+                        <th class="text-center" style="background-color : #ffefd5">Nombres</th>
+                        <th class="text-center" style="background-color : #ffefd5">Primer Apellido</th>
+                        <th class="text-center" style="background-color : #ffefd5">Segundo Apellido</th>
+                        <th class="text-center" style="background-color : #ffefd5">Dirección</th>
+                        <th class="text-center" style="background-color : #ffefd5">Celular</th>
+                        <th class="text-center" style="background-color : #ffefd5">Cargo</th>
+                        <th class="text-center" style="background-color : #ffefd5">Usuario Registro</th>
+                        <th class="text-center" style="background-color : #ffefd5">Fecha Registro</th>
+                        <th class="text-center" style="background-color : #ffefd5">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Where(e => e.Estado != -1))
+                    {
+                        <tr>
+                            <td class="text-center" style="background-color : #ffefd5">@item.CedulaIdentidad</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.Nombres</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.PrimerApellido</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.SegundoApellido</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.Direccion</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.Celular</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.Cargo</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.UsuarioRegistro</td>
+                            <td class="text-center" style="background-color : #ffefd5">@item.FechaRegistro</td>
+                            <td class="text-center" style="background-color : #ffefd5">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-animado btn-sm" style="background: #cd853f; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px;" title="Editar">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-animado btn-sm" style="background: #b8860b; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px;" title="Detalles">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-animado btn-sm" style="background: #ff6347; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px;" title="Eliminar">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var toast = document.getElementById('toast-mensaje');
+            if (toast) {
+                setTimeout(function () {
+                    toast.style.transition = "opacity 0.5s";
+                    toast.style.opacity = 0;
+                    setTimeout(function () { toast.remove(); }, 500);
+                }, 1000);
+            }
+        });
+
+         $(document).ready(function () {
+            $('#buscadorEmpleados').on('keyup', function () {
+                var filtro = $(this).val().toLowerCase();
+                $('table tbody tr').each(function () {
+                    var texto = $(this).text().toLowerCase();
+                    $(this).toggle(texto.indexOf(filtro) > -1);
+                });
+            });
+        });
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+@{
+    ViewData["OcultarFooter"] = true;
+}

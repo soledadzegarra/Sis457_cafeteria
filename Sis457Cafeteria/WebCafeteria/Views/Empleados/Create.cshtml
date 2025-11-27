@@ -1,0 +1,76 @@
+﻿@model WebCafeteria.Models.Empleado
+@{
+    ViewData["Title"] = "Crear Empleado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="dark-background min-vh-100 py-4" style="background: #9C5D3B; font-family: var(--nav-font); color: var(--nav-color);">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="mb-0" style="color: var(--nav-hover-color); font-family: var(--nav-font);">
+                <i class="bi bi-plus-circle me-2" style="color: var(--accent-color);"></i> Nuevo Empleado
+            </h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="card shadow-sm rounded-3" style="background-color:#ffefd5">
+                    <div class="card-body p-4">
+                        <form asp-action="Create" autocomplete="off">
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                            <div class="mb-3">
+                                <label class="control-label">Cédula de Identidad</label>
+                                <input asp-for="CedulaIdentidad" class="form-control" type="number" />
+                                <span asp-validation-for="CedulaIdentidad" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="control-label">Nombres</label>
+                                <input asp-for="Nombres" class="form-control" />
+                                <span asp-validation-for="Nombres" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="control-label">Primer Apellido</label>
+                                <input asp-for="PrimerApellido" class="form-control" />
+                                <span asp-validation-for="PrimerApellido" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="control-label">Segundo Apellido</label>
+                                <input asp-for="SegundoApellido" class="form-control" />
+                                <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="control-label">Dirección</label>
+                                <input asp-for="Direccion" class="form-control" />
+                                <span asp-validation-for="Direccion" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="control-label">Celular</label>
+                                <input asp-for="Celular" class="form-control" />
+                                <span asp-validation-for="Celular" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="control-label">Cargo</label>
+                                <input asp-for="Cargo" class="form-control" />
+                                <span asp-validation-for="Cargo" class="text-danger"></span>
+                            </div>
+                            <div class="d-flex justify-content-end gap-2 mt-4">
+                                <button type="submit" class="btn btn-animado" style="background: #ff9e03; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;">
+                                    <i class="bi bi-check-circle me-1"></i> Guardar
+                                </button>
+                                <a asp-action="Index" class="btn btn-animado" style="background: #b8860b; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;">
+                                    <i class="bi bi-x-circle me-1"></i> Cancelar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+@{
+    ViewData["OcultarFooter"] = true;
+}
