@@ -246,6 +246,11 @@ public partial class LabCafeteriaContext : DbContext
                 .IsUnicode(false)
                 .HasDefaultValueSql("(suser_name())")
                 .HasColumnName("usuarioRegistro");
+            // Nuevo mapeo:
+            entity.Property(e => e.ImagenUrl)
+                .HasMaxLength(300)
+                .IsUnicode(false)
+                .HasColumnName("imagenUrl");
 
             entity.HasOne(d => d.IdCategoriaNavigation).WithMany(p => p.Productos)
                 .HasForeignKey(d => d.IdCategoria)

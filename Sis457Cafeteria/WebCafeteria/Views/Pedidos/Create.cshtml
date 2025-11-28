@@ -1,23 +1,20 @@
 ﻿@model WebCafeteria.Models.Pedido
-
 @{
     ViewData["Title"] = "Nuevo Pedido";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="dark-background min-vh-100 py-4" style="background: #9C5D3B; font-family: var(--nav-font); color: var(--nav-color);">
+<div class="dark-background min-vh-100 py-4" style="background:#9C5D3B;font-family:var(--nav-font);color:var(--nav-color);">
     <div class="container">
         @if (ViewBag.Mensaje != null)
         {
             <div id="toast-mensaje" class="toast-mensaje position-fixed">
-                <i class="bi bi-check-circle-fill me-2"></i>
-                @ViewBag.Mensaje
+                <i class="bi bi-check-circle-fill me-2"></i>@ViewBag.Mensaje
             </div>
         }
-        <h1 class="mb-4" style="color: var(--nav-hover-color); font-family: var(--nav-font);">
-            <i class="bi bi-receipt me-2" style="color: var(--accent-color);"></i> Nuevo Pedido
+        <h1 class="mb-4" style="color:var(--nav-hover-color);font-family:var(--nav-font);">
+            <i class="bi bi-receipt me-2" style="color:var(--accent-color);"></i> Nuevo Pedido
         </h1>
-        <div class="card shadow-lg" style="border-radius: 24px; background: #ffefd5;">
+        <div class="card shadow-lg" style="border-radius:24px;background:#ffefd5;">
             <div class="card-body p-4">
                 <form id="formPedido" asp-action="Create" method="post" autocomplete="off">
                     <div class="row g-3 mb-3">
@@ -42,55 +39,86 @@
                             <input type="text" class="form-control" value="@DateTime.Now.ToString("dd/MM/yyyy HH:mm")" readonly />
                         </div>
                     </div>
+
                     <hr class="my-4" />
-                    <h5 class="mb-3" style="color: #08902c;"><i class="bi bi-basket2"></i> Agregar Productos</h5>
-                    <div class="row g-3 align-items-end mb-3">
-                        <div class="col-md-5">
-                            <label class="form-label fw-semibold"><i class="bi bi-box-seam"></i> Producto</label>
-                            <select id="producto" class="form-select">
-                                <option value="">Seleccione un producto</option>
-                                @foreach (var prod in (IEnumerable<WebCafeteria.Models.Producto>)ViewBag.Productos)
-                                {
-                                    <option value="@prod.Id" data-precio="@prod.PrecioVenta">
-                                        @prod.Nombre (Stock: @prod.Saldo)
-                                    </option>
-                                }
-                            </select>
+                    <div class="row mb-2">
+                        <div class="col-md-6">
+                            <h5 class="mb-0" style="color:#08902c;"><i class="bi bi-basket2"></i> Catálogo de Productos</h5>
                         </div>
-                        <div class="col-md-2">
-                            <label class="form-label fw-semibold"><i class="bi bi-sort-numeric-up"></i> Cantidad</label>
-                            <input type="number" id="cantidad" class="form-control" min="1" value="1" />
-                        </div>
-                        <div class="col-md-2">
-                            <label class="form-label fw-semibold"><i class="bi bi-currency-dollar"></i> Precio</label>
-                            <input type="number" id="precio" class="form-control" min="0" step="0.01" readonly />
-                        </div>
-                        <div class="col-md-2 d-grid">
-                            <button type="button" id="btnAgregarDetalle" class="btn btn-success btn-animado" style="border-radius: 50px;">
-                                <i class="bi bi-plus-circle"></i> Agregar
-                            </button>
+                        <div class="col-md-6">
+                            <input id="buscarProducto" type="text" class="form-control" placeholder="Filtrar por código, nombre o descripción..." />
                         </div>
                     </div>
+
+                    <!-- Catálogo tipo carrito -->
+                    <!-- Catálogo tipo carrito con imagen -->
+                    <div id="catalogoProductos" class="row g-3 mb-4">
+                        @foreach (var prod in (IEnumerable<WebCafeteria.Models.Producto>)ViewBag.Productos)
+                        {
+                            var tieneImg = !string.IsNullOrWhiteSpace(prod.ImagenUrl);
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 card-prod-wrapper"
+                                 data-nombre="@prod.Nombre"
+                                 data-codigo="@prod.Codigo"
+                                 data-descripcion="@prod.Descripcion">
+                                <div class="shadow-sm p-2 h-100 d-flex flex-column justify-content-between card-prod"
+                                     style="background:#fff;border-radius:16px;border:1px solid #e1d5bd;position:relative;">
+                                    <div class="mb-2 d-flex flex-column align-items-center">
+                                        @if (tieneImg)
+                                        {
+                                            <img src="@prod.ImagenUrl"
+                                                 alt="@prod.Nombre"
+                                                 class="prod-thumb mb-2"
+                                                 style="width:100%;height:90px;object-fit:cover;border-radius:12px;"
+                                                 onerror="this.style.visibility='hidden';" />
+                                        }
+                                        else
+                                        {
+                                            <div class="prod-thumb mb-2 d-flex align-items-center justify-content-center"
+                                                 style="width:100%;height:90px;background:#f3e6cc;border-radius:12px;font-size:.75rem;color:#8b7b5a;">
+                                                Sin imagen
+                                            </div>
+                                        }
+                                        <h6 class="fw-bold text-truncate mb-1 w-100 text-center" title="@prod.Nombre">@prod.Nombre</h6>
+                                        <small class="text-muted">Código: @prod.Codigo</small>
+                                        <small class="text-muted">Stock: <span class="stock" data-id="@prod.Id">@prod.Saldo</span></small>
+                                        <small class="text-muted">Precio: <span class="precio" data-id="@prod.Id">@prod.PrecioVenta.ToString("0.00")</span></small>
+                                    </div>
+                                    <div>
+                                        <input type="number"
+                                               class="form-control form-control-sm cantidad-producto"
+                                               data-id="@prod.Id"
+                                               data-nombre="@prod.Nombre"
+                                               data-precio="@prod.PrecioVenta"
+                                               min="0"
+                                               max="@prod.Saldo"
+                                               value="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Tabla de detalle -->
                     <div class="table-responsive mb-4">
-                        <table class="table table-bordered align-middle" id="tablaDetalle" style="background: #fffbe9; border-radius: 16px;">
+                        <table class="table table-bordered align-middle" id="tablaDetalle" style="background:#fffbe9;border-radius:16px;">
                             <thead>
-                                <tr style="background: #ffefd5; color: #b8860b;">
+                                <tr style="background:#ffefd5;color:#b8860b;">
                                     <th>Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Precio Unitario</th>
+                                    <th>Cant.</th>
+                                    <th>Precio Unit.</th>
                                     <th>Total</th>
                                     <th>Quitar</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <!-- detalles -->
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
+
                     <div class="row g-3 mb-3">
                         <div class="col-md-3">
                             <label class="form-label fw-semibold"><i class="bi bi-wallet2"></i> Efectivo</label>
-                            <input type="number" id="efectivo" class="form-control" min="0" step="0.01" />
+                            <!-- Reemplaza el input de efectivo dentro del bloque correspondiente -->
+                            <input type="number" id="efectivo" name="Efectivo" class="form-control" min="0" step="0.01" />
                         </div>
                         <div class="col-md-3">
                             <label class="form-label fw-semibold"><i class="bi bi-cash-stack"></i> Total</label>
@@ -103,10 +131,10 @@
                     </div>
                     <input type="hidden" id="detalleJson" name="DetalleJson" />
                     <div class="d-flex justify-content-end gap-2 mt-4">
-                        <button type="submit" class="btn btn-animado" style="background: #198754; color: var(--nav-hover-color); border-radius: 50px;">
+                        <button type="submit" class="btn btn-animado" style="background:#198754;color:var(--nav-hover-color);border-radius:50px;">
                             <i class="bi bi-save me-1"></i> Guardar Pedido
                         </button>
-                        <a asp-action="Index" class="btn btn-animado" style="background: #b8860b; color: var(--nav-hover-color); border-radius: 50px;">
+                        <a asp-action="Index" class="btn btn-animado" style="background:#b8860b;color:var(--nav-hover-color);border-radius:50px;">
                             <i class="bi bi-x-circle me-1"></i> Cancelar
                         </a>
                     </div>
@@ -115,34 +143,35 @@
         </div>
     </div>
 </div>
-<!-- Modal para agregar cliente -->
+
+<!-- Modal agregar cliente -->
 <div class="modal fade" id="modalAgregarCliente" tabindex="-1" aria-labelledby="modalAgregarClienteLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content" style="background: #ffefd5; border-radius: 24px;">
+        <div class="modal-content" style="background:#ffefd5;border-radius:24px;">
             <form id="formAgregarCliente">
-                <div class="modal-header" style="background: #9C5D3B;">
-                    <h5 class="modal-title" id="modalAgregarClienteLabel" style="color: var(--nav-hover-color);">
+                <div class="modal-header" style="background:#9C5D3B;">
+                    <h5 class="modal-title" id="modalAgregarClienteLabel" style="color:var(--nav-hover-color);">
                         <i class="bi bi-person-plus me-2"></i> Nuevo Cliente
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="ciCliente" class="form-label">Cédula de Identidad</label>
+                        <label class="form-label">Cédula de Identidad</label>
                         <input type="number" class="form-control" id="ciCliente" name="CedulaIdentidad" required />
                     </div>
                     <div class="mb-3">
-                        <label for="nombresCliente" class="form-label">Nombres</label>
+                        <label class="form-label">Nombres</label>
                         <input type="text" class="form-control" id="nombresCliente" name="Nombres" required />
                     </div>
                     <div class="mb-3">
-                        <label for="apellidosCliente" class="form-label">Apellidos</label>
+                        <label class="form-label">Apellidos</label>
                         <input type="text" class="form-control" id="apellidosCliente" name="Apellidos" required />
                     </div>
                 </div>
-                <div class="modal-footer" style="background: #ffefd5;">
-                    <button type="button" class="btn btn-animado" data-bs-dismiss="modal" style="background: #b8860b;">Cancelar</button>
-                    <button type="submit" class="btn btn-animado" style="background: #ff9e03;">Guardar</button>
+                <div class="modal-footer" style="background:#ffefd5;">
+                    <button type="button" class="btn btn-animado" data-bs-dismiss="modal" style="background:#b8860b;">Cancelar</button>
+                    <button type="submit" class="btn btn-animado" style="background:#ff9e03;">Guardar</button>
                 </div>
             </form>
         </div>
@@ -152,118 +181,61 @@
 @section Scripts {
     <script>
         let detalles = [];
-        // guardar el stock de cada producto
-        let stockProductos = {};
+        const debounceMs = 250;
+        let debounceHandle = null;
 
-        // iniciar stockProductos al cargar la página
-        $(document).ready(function () {
-            $('#producto option').each(function () {
-                const id = $(this).val();
-                const texto = $(this).text();
+        // Inicial
+        actualizarTotales();
 
-                const match = texto.match(/\(Stock:\s*(\d+)\)/);
-                if (id && match) {
-                    stockProductos[id] = parseInt(match[1]);
+        // Cambio de cantidad en catálogo
+        $('#catalogoProductos').on('input', '.cantidad-producto', function () {
+            const $input = $(this);
+            let cantidad = parseInt($input.val()) || 0;
+            const max = parseInt($input.attr('max')) || 0;
+            if (cantidad > max) { cantidad = max; $input.val(max); }
+
+            const id = $input.data('id');
+            const nombre = $input.data('nombre');
+            const precio = parseFloat($input.data('precio'));
+
+            let existente = detalles.find(d => d.idProducto == id);
+
+            if (cantidad <= 0) {
+                if (existente) detalles = detalles.filter(d => d.idProducto != id);
+            } else {
+                if (!existente) {
+                    detalles.push({
+                        idProducto: id,
+                        nombreProducto: nombre,
+                        cantidad: cantidad,
+                        precioUnitario: precio,
+                        total: cantidad * precio
+                    });
+                } else {
+                    existente.cantidad = cantidad;
+                    existente.total = cantidad * existente.precioUnitario;
                 }
+            }
+            renderDetalle();
+            reordenarCards();
+        });
+
+        // Reordenar: seleccionados arriba
+        function reordenarCards() {
+            const cont = $('#catalogoProductos');
+            const cards = cont.children('.card-prod-wrapper').get();
+            cards.sort((a, b) => {
+                const ca = parseInt($(a).find('.cantidad-producto').val()) || 0;
+                const cb = parseInt($(b).find('.cantidad-producto').val()) || 0;
+                if (ca === 0 && cb === 0) return 0;
+                if (ca === 0) return 1;
+                if (cb === 0) return -1;
+                return 0; // mantener orden relativo
             });
-        });
+            cont.append(cards);
+        }
 
-        // seleccionar al producto ymostrar el precio
-        $('#producto').on('change', function () {
-            const precio = $('option:selected', this).data('precio') || 0;
-            $('#precio').val(precio);
-            // Limita cantidad maxima al stock
-            const idProducto = $(this).val();
-            if (idProducto && stockProductos[idProducto] !== undefined) {
-                $('#cantidad').attr('max', stockProductos[idProducto]);
-            } else {
-                $('#cantidad').removeAttr('max');
-            }
-        });
-
-        // aggregar producto al detalle
-        $('#btnAgregarDetalle').on('click', function (e) {
-            e.preventDefault();
-            const idProducto = $('#producto').val();
-            const nombreProducto = $('#producto option:selected').text();
-            const precio = parseFloat($('#precio').val());
-            const cantidad = parseInt($('#cantidad').val());
-
-            if (!idProducto || isNaN(precio) || isNaN(cantidad) || cantidad < 1) {
-                alert('Seleccione un producto y cantidad válida.');
-                return;
-            }
-            if (cantidad > stockProductos[idProducto]) {
-                alert('No hay suficiente stock disponible.');
-                return;
-            }
-
-            // verificar si ya existe el producto en el detalle
-            const existente = detalles.find(d => d.idProducto == idProducto);
-            if (existente) {
-                if (existente.cantidad + cantidad > stockProductos[idProducto]) {
-                    alert('No hay suficiente stock disponible.');
-                    return;
-                }
-                existente.cantidad += cantidad;
-                existente.total = existente.cantidad * existente.precioUnitario;
-            } else {
-                detalles.push({
-                    idProducto: idProducto,
-                    nombreProducto: nombreProducto,
-                    cantidad: cantidad,
-                    precioUnitario: precio,
-                    total: cantidad * precio
-                });
-            }
-
-            // disminuye el saldo/stock
-            stockProductos[idProducto] -= cantidad;
-
-            // si el stock llega a 0  quitar el producto
-            if (stockProductos[idProducto] <= 0) {
-                $('#producto option[value="' + idProducto + '"]').remove();
-            } else {
-                // actualiza el texto del producto
-                $('#producto option[value="' + idProducto + '"]').text(
-                    nombreProducto.replace(/\(Stock:\s*\d+\)/, '(Stock: ' + stockProductos[idProducto] + ')')
-                );
-            }
-
-            renderDetalle();
-            limpiarProducto();
-        });
-
-        // quita el producto del detalle
-        $('#tablaDetalle').on('click', '.btn-quitar', function () {
-            const idProducto = $(this).data('id');
-            const detalle = detalles.find(d => d.idProducto == idProducto);
-            if (detalle) {
-                // devuelve el stock al combo
-                if (stockProductos[idProducto] !== undefined) {
-                    stockProductos[idProducto] += detalle.cantidad;
-                    // si no existe la vuelve a agregar
-                    if ($('#producto option[value="' + idProducto + '"]').length === 0) {
-                        $('#producto').append(
-                            `<option value="${idProducto}" data-precio="${detalle.precioUnitario}">${detalle.nombreProducto.replace(/\(Stock:\s*\d+\)/, '(Stock: ' + stockProductos[idProducto] + ')')}</option>`
-                        );
-                    } else {
-                        $('#producto option[value="' + idProducto + '"]').text(
-                            detalle.nombreProducto.replace(/\(Stock:\s*\d+\)/, '(Stock: ' + stockProductos[idProducto] + ')')
-                        );
-                    }
-                }
-            }
-            detalles = detalles.filter(d => d.idProducto != idProducto);
-            renderDetalle();
-        });
-
-        // calcular cambio al escribir efectivo
-        $('#efectivo').on('input', function () {
-            calcularCambio();
-        });
-
-        //  tabla de detalle y calcular total
+        // Render tabla detalle
         function renderDetalle() {
             let html = '';
             let total = 0;
@@ -279,11 +251,22 @@
             });
             $('#tablaDetalle tbody').html(html);
             $('#total').val(total.toFixed(2));
-            calcularCambio();
             $('#detalleJson').val(JSON.stringify(detalles));
+            calcularCambio();
         }
 
-        // cambio
+        // Quitar desde tabla
+        $('#tablaDetalle').on('click', '.btn-quitar', function () {
+            const id = $(this).data('id');
+            detalles = detalles.filter(d => d.idProducto != id);
+            // Reset cantidad en catálogo
+            $('.cantidad-producto[data-id="' + id + '"]').val(0);
+            renderDetalle();
+            reordenarCards();
+        });
+
+        // Calcular cambio
+        $('#efectivo').on('input', calcularCambio);
         function calcularCambio() {
             const total = parseFloat($('#total').val()) || 0;
             const efectivo = parseFloat($('#efectivo').val()) || 0;
@@ -291,17 +274,14 @@
             $('#cambio').val(cambio >= 0 ? cambio.toFixed(2) : '0.00');
         }
 
-        // limpia producto
-        function limpiarProducto() {
-            $('#producto').val('');
-            $('#precio').val('');
-            $('#cantidad').val(1);
+        function actualizarTotales() {
+            renderDetalle();
         }
 
-        // validar
+        // Validación final
         $('#formPedido').on('submit', function () {
             if (detalles.length === 0) {
-                alert('Debe agregar al menos un producto al pedido.');
+                alert('Debe agregar al menos un producto.');
                 return false;
             }
             if ($('#efectivo').val() === '' || parseFloat($('#efectivo').val()) < parseFloat($('#total').val())) {
@@ -312,54 +292,53 @@
             return true;
         });
 
-        // (abre el modal)
-        $('#btnNuevoCliente').on('click', function () {
-            $('#modalAgregarCliente').modal('show');
+        // Filtro productos (debounce)
+        $('#buscarProducto').on('input', function () {
+            clearTimeout(debounceHandle);
+            const filtro = $(this).val().toLowerCase();
+            debounceHandle = setTimeout(() => {
+                $('#catalogoProductos .card-prod-wrapper').each(function () {
+                    const nombre = ($(this).data('nombre') || '').toLowerCase();
+                    const codigo = ($(this).data('codigo') || '').toLowerCase();
+                    const descripcion = ($(this).data('descripcion') || '').toLowerCase();
+                    const coincide = nombre.includes(filtro) || codigo.includes(filtro) || descripcion.includes(filtro);
+                    $(this).toggle(coincide);
+                });
+            }, debounceMs);
         });
 
-        // guardar cliente
-        $('#formAgregarCliente').submit(function (e) {
+        // Cliente rápido
+        $('#btnNuevoCliente').on('click', () => $('#modalAgregarCliente').modal('show'));
+        $('#formAgregarCliente').on('submit', function (e) {
             e.preventDefault();
-            var datos = {
+            const datos = {
                 CedulaIdentidad: $('#ciCliente').val(),
                 Nombres: $('#nombresCliente').val(),
                 Apellidos: $('#apellidosCliente').val()
             };
-            $.post('@Url.Action("CreateQuick", "Clientes")', datos, function (result) {
-                if (result.success) {
-                    // agrega el nuevo cliente al combo y selecciona
-                    $('#IdCliente').append(
-                        `<option value="${result.id}">${result.nombres} ${result.apellidos} (${result.ci})</option>`
-                    );
-                    $('#IdCliente').val(result.id);
+            $.post('@Url.Action("CreateQuick", "Clientes")', datos, function (r) {
+                if (r.success) {
+                    $('#IdCliente').append(`<option value="${r.id}">${r.nombres} ${r.apellidos} (${r.ci})</option>`);
+                    $('#IdCliente').val(r.id);
                     $('#modalAgregarCliente').modal('hide');
                     alert('Cliente agregado correctamente.');
                 } else {
-                    alert(result.mensaje || 'Error al agregar cliente.');
+                    alert(r.mensaje || 'Error al agregar cliente.');
                 }
             });
         });
 
-        //mensaje tiempo
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('#toast-mensaje').fadeOut();
-            }, 3000);
-        });
-
-        // Filtro de clientes en el select
+        // Filtro clientes
         $('#buscarCliente').on('keyup', function () {
-            var filtro = $(this).val().toLowerCase();
+            const filtro = $(this).val().toLowerCase();
             $('#IdCliente option').each(function () {
-                if ($(this).val() === "") return; // No ocultar el placeholder
-                var texto = $(this).text().toLowerCase();
-                $(this).toggle(texto.indexOf(filtro) > -1);
+                if ($(this).val() === "") return;
+                $(this).toggle($(this).text().toLowerCase().indexOf(filtro) > -1);
             });
-            // Si no hay coincidencias, selecciona el placeholder
-            if ($('#IdCliente option:visible').length === 1) {
-                $('#IdCliente').val('');
-            }
+            if ($('#IdCliente option:visible').length === 1) $('#IdCliente').val('');
         });
 
+        // Toast auto-ocultar
+        setTimeout(() => $('#toast-mensaje').fadeOut(), 3000);
     </script>
 }

@@ -81,77 +81,110 @@ namespace WebCafeteria.Controllers
             if (string.IsNullOrEmpty(DetalleJson))
             {
                 ModelState.AddModelError("", "Debe agregar al menos un producto.");
-                ViewBag.Clientes = _context.Clientes.Where(c => c.Estado == 1).ToList();
-                ViewBag.Productos = _context.Productos.Where(p => p.Estado == 1).ToList();
+                CargarListas();
                 return View(pedido);
             }
 
-
-            var detalles = System.Text.Json.JsonSerializer.Deserialize<List<DetallePedidoVM>>(DetalleJson);
+            List<DetallePedidoVM>? detalles;
+            try
+            {
+                detalles = System.Text.Json.JsonSerializer.Deserialize<List<DetallePedidoVM>>(
+                    DetalleJson,
+                    new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Formato de detalle inválido: " + ex.Message);
+                CargarListas();
+                return View(pedido);
+            }
 
             if (detalles == null || detalles.Count == 0)
             {
                 ModelState.AddModelError("", "Debe agregar al menos un producto.");
-                ViewBag.Clientes = _context.Clientes.Where(c => c.Estado == 1).ToList();
-                ViewBag.Productos = _context.Productos.Where(p => p.Estado == 1).ToList();
+                CargarListas();
                 return View(pedido);
             }
 
 
+            // VALIDAR productos y stock ANTES de crear el pedido
+            var ids = detalles.Select(d => d.idProducto).Distinct().ToList();
+            var productos = await _context.Productos
+                .Where(p => ids.Contains(p.Id) && p.Estado == 1)
+                .ToDictionaryAsync(p => p.Id);
+
+            foreach (var d in detalles)
+            {
+                if (!productos.ContainsKey(d.idProducto))
+                {
+                    ModelState.AddModelError("", $"El producto ID {d.idProducto} ya no existe o está inactivo.");
+                    CargarListas();
+                    return View(pedido);
+                }
+                if (d.cantidad > productos[d.idProducto].Saldo)
+                {
+                    ModelState.AddModelError("", $"Stock insuficiente para '{productos[d.idProducto].Nombre}'. Disponible: {productos[d.idProducto].Saldo}, solicitado: {d.cantidad}.");
+                    CargarListas();
+                    return View(pedido);
+                }
+            }
+
+            // Preparar pedido
             pedido.FechaRegistro = DateTime.Now;
             pedido.UsuarioRegistro = User.Identity.Name;
             pedido.Estado = 1;
-
 
             var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Usuario1 == User.Identity.Name);
             if (usuario == null)
             {
                 ModelState.AddModelError("", "No se pudo identificar el usuario actual.");
-                ViewBag.Clientes = _context.Clientes.Where(c => c.Estado == 1).ToList();
-                ViewBag.Productos = _context.Productos.Where(p => p.Estado == 1).ToList();
+                CargarListas();
                 return View(pedido);
             }
             pedido.IdUsuario = usuario.Id;
 
             _context.Pedidos.Add(pedido);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); // genera Id y numeroTransaccion
 
+            // Insertar detalles y actualizar stock
             foreach (var d in detalles)
             {
-                var detalle = new DetallePedido
+                var producto = productos[d.idProducto];
+
+                _context.DetallePedidos.Add(new DetallePedido
                 {
                     IdPedido = pedido.Id,
-                    IdProducto = int.Parse(d.idProducto),
+                    IdProducto = d.idProducto,
                     Cantidad = d.cantidad,
                     PrecioUnitario = d.precioUnitario,
                     Total = d.total,
                     UsuarioRegistro = pedido.UsuarioRegistro,
                     FechaRegistro = DateTime.Now,
                     Estado = 1
-                };
-                _context.DetallePedidos.Add(detalle);
+                });
 
-
-                var producto = await _context.Productos.FindAsync(detalle.IdProducto);
-                if (producto != null)
-                {
-                    producto.Saldo -= detalle.Cantidad;
-                    if (producto.Saldo < 0) producto.Saldo = 0;
-                    _context.Productos.Update(producto);
-                }
+                producto.Saldo -= d.cantidad;
+                if (producto.Saldo < 0) producto.Saldo = 0;
+                _context.Productos.Update(producto);
             }
-            await _context.SaveChangesAsync();
 
-            ViewBag.Clientes = _context.Clientes.Where(c => c.Estado == 1).ToList();
-            ViewBag.Productos = _context.Productos.Where(p => p.Estado == 1 && p.Saldo > 0).ToList();
-            ViewBag.Mensaje = "Pedido guardado correctamente.";
-            return View();
+            await _context.SaveChangesAsync();
+            TempData["Mensaje"] = "Pedido guardado correctamente.";
+
+            // REDIRECT para refrescar lista
+            return RedirectToAction(nameof(Index));
         }
 
+        // Factoriza carga de listas
+        private void CargarListas()
+        {
+            ViewBag.Clientes = _context.Clientes.Where(c => c.Estado == 1).ToList();
+            ViewBag.Productos = _context.Productos.Where(p => p.Estado == 1 && p.Saldo > 0).ToList();
+        }
 
         public class DetallePedidoVM
         {
-            public string idProducto { get; set; }
+            public int idProducto { get; set; }          // antes string
             public string nombreProducto { get; set; }
             public int cantidad { get; set; }
             public decimal precioUnitario { get; set; }

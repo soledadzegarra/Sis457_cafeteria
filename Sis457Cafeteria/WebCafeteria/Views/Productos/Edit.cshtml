@@ -53,6 +53,11 @@
                                 <input asp-for="PrecioVenta" class="form-control" type="number" />
                                 <span asp-validation-for="PrecioVenta" class="text-danger"></span>
                             </div>
+                            <div class="mb-3">
+                                <label class="control-label">URL Imagen (opcional)</label>
+                                <input asp-for="ImagenUrl" class="form-control" placeholder="https://..." />
+                                <span asp-validation-for="ImagenUrl" class="text-danger"></span>
+                            </div>
                             <div class="d-flex justify-content-end gap-2 mt-4">
                                 <button type="submit" class="btn btn-animado" style="background: #cd853f; color: var(--nav-hover-color); border: 1.5px solid var(--accent-color); border-radius: 50px; font-weight: 500;">
                                     <i class="bi bi-save me-1"></i> Guardar Cambios

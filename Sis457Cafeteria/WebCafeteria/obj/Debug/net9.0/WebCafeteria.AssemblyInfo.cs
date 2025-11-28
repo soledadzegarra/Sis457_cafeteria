@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebCafeteria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7677d6cbb4358d735d5abf848494e8fbd19c62d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94c5ec584bed6c94d1488e93273e5d8e6522090a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebCafeteria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebCafeteria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

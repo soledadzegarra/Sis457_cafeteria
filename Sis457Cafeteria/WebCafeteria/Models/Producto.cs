@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebCafeteria.Models;
 
@@ -14,6 +15,11 @@ public partial class Producto
     public string Nombre { get; set; } = null!;
 
     public string? Descripcion { get; set; }
+
+    // Nuevo: URL opcional de imagen
+    [Url(ErrorMessage = "Ingrese una URL válida.")]
+    [MaxLength(300)]
+    public string? ImagenUrl { get; set; }
 
     public decimal Saldo { get; set; }
 

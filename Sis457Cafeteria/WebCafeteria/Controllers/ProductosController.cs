@@ -96,9 +96,11 @@ namespace WebCafeteria.Controllers
         // POST: Productos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Modificar acción Edit para incluir ImagenUrl en Bind:
+        // Modificar acción Edit para incluir ImagenUrl en Bind:
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Saldo,PrecioVenta,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,ImagenUrl,Saldo,PrecioVenta,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
         {
             if (id != producto.Id)
             {

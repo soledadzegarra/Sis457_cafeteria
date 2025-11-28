@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RvuBoYD87M8=",
+  "dgSpecHash": "nHZpGlAfLpI=",
   "success": true,
-  "projectFilePath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\WebCafeteria.csproj",
+  "projectFilePath": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\WebCafeteria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alien\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Alien\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

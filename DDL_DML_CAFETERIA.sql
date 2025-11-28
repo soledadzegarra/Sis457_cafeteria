@@ -110,6 +110,11 @@ CREATE TABLE DetallePedido (
 );
 
 GO
+ALTER TABLE Producto ADD imagenUrl VARCHAR(300) NULL;
+GO
+
+
+GO
 CREATE PROC paPedidoListar @parametro VARCHAR(100)
 AS
   SELECT p.id, p.numeroTransaccion, c.nombres + ' ' + c.apellidos AS Cliente, 
