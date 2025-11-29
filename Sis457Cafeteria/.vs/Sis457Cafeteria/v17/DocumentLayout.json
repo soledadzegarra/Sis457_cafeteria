@@ -1,26 +1,151 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
+  "WorkspaceRootPath": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\labcafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\labcafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\pedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\pedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\shared\\_logoutpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\shared\\_logoutpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\pedidos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\pedidos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\empleados\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\empleados\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\categorias\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\categorias\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\categorias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\categorias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\categorias\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\categorias\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\categorias\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\categorias\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\FinalCafeteria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\FinalCafeteria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\FinalCafeteria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +155,459 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebCafeteria\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAwwHMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-28T23:54:23.598Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\appsettings.json",
+              "RelativeDocumentMoniker": "WebCafeteria\\appsettings.json",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\appsettings.json",
+              "RelativeToolTip": "WebCafeteria\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-29T16:46:56.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebCafeteria\\Controllers\\HomeController.cs",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebCafeteria\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T23:53:13.495Z",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Empleados\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Empleados\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Empleados\\Index.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Empleados\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:35:23.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Program.cs",
               "RelativeDocumentMoniker": "WebCafeteria\\Program.cs",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Program.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Program.cs",
               "RelativeToolTip": "WebCafeteria\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T23:52:16.823Z",
+              "WhenOpened": "2025-11-29T16:35:08.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PedidosController.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\PedidosController.cs",
-              "RelativeDocumentMoniker": "WebCafeteria\\Controllers\\PedidosController.cs",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\PedidosController.cs",
-              "RelativeToolTip": "WebCafeteria\\Controllers\\PedidosController.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAIAwwGsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:35:00.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Usuarios\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Edit.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Usuarios\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:34:59.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Usuarios\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Details.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Usuarios\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:34:58.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Usuarios\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Delete.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Usuarios\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:34:57.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Usuarios\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Usuarios\\Create.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Usuarios\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:34:54.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:34:48.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_LogoutPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:34:31.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:32:31.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:32:23.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Pedidos\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Edit.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Pedidos\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:31:07.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LabCafeteriaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\LabCafeteriaContext.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\LabCafeteriaContext.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\LabCafeteriaContext.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\LabCafeteriaContext.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwCMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T19:53:03.129Z",
+              "WhenOpened": "2025-11-29T16:19:58.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "WebCafeteria\\Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:35:39.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Pedidos\\Create.cshtml",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Create.cshtml",
-              "RelativeToolTip": "WebCafeteria\\Views\\Pedidos\\Create.cshtml",
-              "ViewState": "AgIAACIBAAAAAAAAAAAuwCoBAAApAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Empleados\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Empleados\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Empleados\\Create.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Empleados\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-28T19:52:05.924Z",
+              "WhenOpened": "2025-11-29T16:29:59.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Empleados\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Empleados\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Empleados\\Delete.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Empleados\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:29:58.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetallePedido.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\DetallePedido.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\DetallePedido.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\DetallePedido.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\DetallePedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:19:07.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\wwwroot\\css\\main.css",
+              "RelativeDocumentMoniker": "WebCafeteria\\wwwroot\\css\\main.css",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\wwwroot\\css\\main.css",
+              "RelativeToolTip": "WebCafeteria\\wwwroot\\css\\main.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO4BAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-29T16:26:54.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Categorias\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Index.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Categorias\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:22:23.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Categorias\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Edit.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Categorias\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:22:21.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Categorias\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Details.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Categorias\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:22:20.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Categorias\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Categorias\\Create.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Categorias\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:22:19.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Cliente.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:21:27.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Categoria.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:21:22.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Empleado.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Empleado.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\Empleado.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:20:58.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "WebCafeteria\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:20:31.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Producto.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\Producto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:20:17.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Pedido.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:20:16.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:20:15.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\Usuario.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:19:57.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Productos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Create.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Productos\\Create.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:03:06.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "WebCafeteria\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:19:51.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Productos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Index.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Productos\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:02:39.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FinalCafeteria.sql ",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\FinalCafeteria.sql",
+              "RelativeDocumentMoniker": "..\\FinalCafeteria.sql",
+              "ToolTip": "FinalCafeteria.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-29T15:50:35.104Z",
               "EditorCaption": ""
             }
           ]

@@ -176,3 +176,6 @@ VALUES (1, 'marle', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 INSERT INTO Usuario(idEmpleado,usuario,clave)
 VALUES (2, 'sole', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
+SELECT * FROM Usuario;
+
