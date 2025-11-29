@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
+  "WorkspaceRootPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\marle lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\marle lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\pedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\pedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\pedidos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,10 +39,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAwwHMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T23:54:23.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Controllers\\HomeController.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebCafeteria\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T23:53:13.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Program.cs",
+              "RelativeDocumentMoniker": "WebCafeteria\\Program.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Program.cs",
+              "RelativeToolTip": "WebCafeteria\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T23:52:16.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PedidosController.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\PedidosController.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\PedidosController.cs",
               "RelativeDocumentMoniker": "WebCafeteria\\Controllers\\PedidosController.cs",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\PedidosController.cs",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Controllers\\PedidosController.cs",
               "RelativeToolTip": "WebCafeteria\\Controllers\\PedidosController.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAIAwwGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Create.cshtml",
+              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Create.cshtml",
               "RelativeDocumentMoniker": "WebCafeteria\\Views\\Pedidos\\Create.cshtml",
-              "ToolTip": "G:\\PROGRAMACION\\MARLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Create.cshtml*",
-              "RelativeToolTip": "WebCafeteria\\Views\\Pedidos\\Create.cshtml*",
-              "ViewState": "AgIAAGoAAAAAAAAAAIAwwHcAAAA+AAAAAAAAAA==",
+              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Pedidos\\Create.cshtml",
+              "RelativeToolTip": "WebCafeteria\\Views\\Pedidos\\Create.cshtml",
+              "ViewState": "AgIAACIBAAAAAAAAAAAuwCoBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-28T19:52:05.924Z",
               "EditorCaption": ""

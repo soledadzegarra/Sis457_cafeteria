@@ -50,8 +50,7 @@
                         </div>
                     </div>
 
-                    <!-- Catálogo tipo carrito -->
-                    <!-- Catálogo tipo carrito con imagen -->
+                    <!-- Catálogo tipo carrito con imagen y NOMBRE (sin código) -->
                     <div id="catalogoProductos" class="row g-3 mb-4">
                         @foreach (var prod in (IEnumerable<WebCafeteria.Models.Producto>)ViewBag.Productos)
                         {
@@ -61,25 +60,28 @@
                                  data-codigo="@prod.Codigo"
                                  data-descripcion="@prod.Descripcion">
                                 <div class="shadow-sm p-2 h-100 d-flex flex-column justify-content-between card-prod"
-                                     style="background:#fff;border-radius:16px;border:1px solid #e1d5bd;position:relative;">
+                                     style="background:#fff;border-radius:16px;border:1px solid #e1d5bd;">
                                     <div class="mb-2 d-flex flex-column align-items-center">
                                         @if (tieneImg)
                                         {
                                             <img src="@prod.ImagenUrl"
                                                  alt="@prod.Nombre"
-                                                 class="prod-thumb mb-2"
                                                  style="width:100%;height:90px;object-fit:cover;border-radius:12px;"
                                                  onerror="this.style.visibility='hidden';" />
                                         }
                                         else
                                         {
-                                            <div class="prod-thumb mb-2 d-flex align-items-center justify-content-center"
-                                                 style="width:100%;height:90px;background:#f3e6cc;border-radius:12px;font-size:.75rem;color:#8b7b5a;">
+                                            <div style="width:100%;height:90px;background:#f3e6cc;border-radius:12px;
+                                            display:flex;align-items:center;justify-content:center;
+                                            font-size:.75rem;color:#8b7b5a;">
                                                 Sin imagen
                                             </div>
                                         }
-                                        <h6 class="fw-bold text-truncate mb-1 w-100 text-center" title="@prod.Nombre">@prod.Nombre</h6>
-                                        <small class="text-muted">Código: @prod.Codigo</small>
+                                        <!-- Mostrar solo el nombre -->
+                                        <h6 class="fw-bold mb-1 w-100 text-center" 
+                                        style="color:#333; white-space:normal; overflow:visible; font-size:0.9rem; line-height:1.2;" 
+                                        title="@prod.Nombre"> @prod.Nombre </h6>
+                                        <!-- Quitar la línea de Código -->
                                         <small class="text-muted">Stock: <span class="stock" data-id="@prod.Id">@prod.Saldo</span></small>
                                         <small class="text-muted">Precio: <span class="precio" data-id="@prod.Id">@prod.PrecioVenta.ToString("0.00")</span></small>
                                     </div>
@@ -292,17 +294,32 @@
             return true;
         });
 
-        // Filtro productos (debounce)
+        // Filtro productos (debounce) robusto: muestra todo si filtro vacío y evita conflicto con reordenado
         $('#buscarProducto').on('input', function () {
             clearTimeout(debounceHandle);
-            const filtro = $(this).val().toLowerCase();
+            const filtro = ($(this).val() || '').toLowerCase().trim();
             debounceHandle = setTimeout(() => {
-                $('#catalogoProductos .card-prod-wrapper').each(function () {
-                    const nombre = ($(this).data('nombre') || '').toLowerCase();
-                    const codigo = ($(this).data('codigo') || '').toLowerCase();
-                    const descripcion = ($(this).data('descripcion') || '').toLowerCase();
-                    const coincide = nombre.includes(filtro) || codigo.includes(filtro) || descripcion.includes(filtro);
-                    $(this).toggle(coincide);
+                const $cards = $('#catalogoProductos .card-prod-wrapper');
+                if (filtro.length === 0) {
+                    // Mostrar todo cuando el filtro está vacío
+                    $cards.show();
+                    return;
+                }
+                $cards.each(function () {
+                    const $card = $(this);
+                    // Texto visible del nombre
+                    const nombreVisible = ($card.find('h6').text() || '').toLowerCase();
+                    // Data attributes como respaldo
+                    const nombre = ($card.data('nombre') || '').toLowerCase();
+                    const codigo = ($card.data('codigo') || '').toLowerCase();
+                    const descripcion = ($card.data('descripcion') || '').toLowerCase();
+
+                    const coincide = nombreVisible.includes(filtro)
+                        || nombre.includes(filtro)
+                        || codigo.includes(filtro)
+                        || descripcion.includes(filtro);
+
+                    if (coincide) $card.show(); else $card.hide();
                 });
             }, debounceMs);
         });
