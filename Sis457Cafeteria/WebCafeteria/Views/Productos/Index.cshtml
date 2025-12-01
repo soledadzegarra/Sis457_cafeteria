@@ -86,14 +86,14 @@
             <table class="table table-hover align-middle mb-0">
                 <thead>
                     <tr>
+                        <th class="text-center" style="background-color : #ffefd5">Img</th>
                         <th class="text-center" style="background-color : #ffefd5">Código</th>
                         <th class="text-center" style="background-color : #ffefd5">Nombre</th>
                         <th class="text-center" style="background-color : #ffefd5">Descripción</th>
                         <th class="text-center" style="background-color : #ffefd5">Saldo</th>
                         <th class="text-center" style="background-color : #ffefd5">Precio de Venta</th>
-                        <th class="text-center" style=" background-color : #ffefd5">Usuario</th>
+                        <th class="text-center" style="background-color : #ffefd5">Usuario</th>
                         <th class="text-center" style="background-color : #ffefd5">Fecha de Registro</th>
-
                         <th class="text-center" style="background-color : #ffefd5">Categoría</th>
                         <th class="text-center" style="background-color : #ffefd5">Acciones</th>
                     </tr>
@@ -102,6 +102,19 @@
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td class="text-center" style="background-color : #ffefd5">
+                                @if (!string.IsNullOrWhiteSpace(item.ImagenUrl))
+                                {
+                                    <img src="@item.ImagenUrl"
+                                         alt="@item.Nombre"
+                                         style="height:50px;width:50px;object-fit:cover;border-radius:8px;"
+                                         onerror="this.style.display='none';" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted" style="font-size:.7rem;">Sin imagen</span>
+                                }
+                            </td>
                             <td class="text-center" style="background-color : #ffefd5">@Html.DisplayFor(modelItem => item.Codigo)</td>
                             <td class="text-center" style="background-color : #ffefd5">@Html.DisplayFor(modelItem => item.Nombre)</td>
                             <td class="text-center" style="background-color : #ffefd5">@Html.DisplayFor(modelItem => item.Descripcion)</td>
@@ -131,7 +144,6 @@
 
 @section Scripts {
     <script>
-        // cargar categorias
         $('#modalAgregarCategoria').on('show.bs.modal', function () {
             cargarCategorias();
         });
@@ -159,7 +171,6 @@
             });
         }
 
-        // eliminar categoria
         $(document).on('click', '.btn-eliminar-categoria', function () {
             var id = $(this).data('id');
             if (confirm('¿Está seguro de eliminar esta categoría?')) {
@@ -172,7 +183,6 @@
             }
         });
 
-        // agregar categoria
         $('#formAgregarCategoria').submit(function (e) {
             e.preventDefault();
             var nombre = $('#Nombre').val();
@@ -194,6 +204,7 @@
                     $(this).toggle(texto.indexOf(filtro) > -1);
                 });
             });
+            setTimeout(function () { $('#toast-mensaje').fadeOut(); }, 3000);
         });
     </script>
     @{

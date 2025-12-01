@@ -7701,23 +7701,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adm\\.nuget\\packages\\": {},
+    "C:\\Users\\Alien\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\WebCafeteria.csproj",
+      "projectUniqueName": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\WebCafeteria.csproj",
       "projectName": "WebCafeteria",
-      "projectPath": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\WebCafeteria.csproj",
-      "packagesPath": "C:\\Users\\Adm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\obj\\",
+      "projectPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\WebCafeteria.csproj",
+      "packagesPath": "C:\\Users\\Alien\\.nuget\\packages\\",
+      "outputPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Alien\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7792,7 +7792,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
