@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\",
+  "WorkspaceRootPath": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\labcafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\models\\labcafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\models\\labcafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|g:\\programacion\\sole lab\\sis457 cafeteria\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|c:\\users\\adm\\desktop\\flor\\sis457_cafeteria\\sis457cafeteria\\webcafeteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A308CA2B-BED8-49F2-9AFC-82CFEFAD54A9}|WebCafeteria\\WebCafeteria.csproj|solutionrelative:webcafeteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,34 +18,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Index.cshtml",
               "RelativeDocumentMoniker": "WebCafeteria\\Views\\Productos\\Index.cshtml",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Views\\Productos\\Index.cshtml",
               "RelativeToolTip": "WebCafeteria\\Views\\Productos\\Index.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAIAwwNQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-01T13:35:14.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T13:35:14.3Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LabCafeteriaContext.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\LabCafeteriaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\LabCafeteriaContext.cs",
               "RelativeDocumentMoniker": "WebCafeteria\\Models\\LabCafeteriaContext.cs",
-              "ToolTip": "G:\\PROGRAMACION\\SOLE LAB\\SIS457 CAFETERIA\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\LabCafeteriaContext.cs",
+              "ToolTip": "C:\\Users\\Adm\\Desktop\\flor\\Sis457_cafeteria\\Sis457Cafeteria\\WebCafeteria\\Models\\LabCafeteriaContext.cs",
               "RelativeToolTip": "WebCafeteria\\Models\\LabCafeteriaContext.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvyIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA7wCEAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-01T13:31:16.697Z",
               "EditorCaption": ""
